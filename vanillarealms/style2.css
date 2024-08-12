@@ -665,6 +665,9 @@ p {
   border-radius: 10px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   background: #f9f9f9;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 4px solid black;
 }
 
 h1 {
@@ -679,7 +682,7 @@ h1 {
 }
 
 .cool-button {
-  background: #ff69b4;
+  background: #c35b80 ;
   border: none;
   border-radius: 50px;
   padding: 15px 30px;
@@ -695,7 +698,7 @@ h1 {
 }
 
 .cool-button:hover {
-  background: #ff85c1;
+  background: #9b4666;
   transform: translateY(-3px);
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
 }
