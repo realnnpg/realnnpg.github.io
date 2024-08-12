@@ -71,7 +71,7 @@ var swiper = new Swiper('.swiper-container', {
 function initServerData(serverIp,serverPort){
   const serverIpElement = document.getElementById('server-ip');
   serverIpElement.innerHTML = serverIp;
-  fetch('https://mcapi.us/server/status?ip=vanillarealms.com)
+  fetch('https://mcapi.us/server/status?ip='+serverIp+'&port='+serverPort)
   .then(response => response.json())
   .then(data => handleServerStatus(data));
 
