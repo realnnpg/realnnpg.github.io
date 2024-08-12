@@ -427,7 +427,7 @@
   border-radius: 10px;
   border: 2px solid #00f;
 }
-.swiper-button-next, .swiper-button-prev {
+.test-next, .swiper-button-prev {
   color: #00f;
   top: -50px; /* Position the buttons above the images */
 }
