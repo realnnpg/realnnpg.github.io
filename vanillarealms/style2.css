@@ -437,9 +437,11 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  top: -19px;
+  top: -31px !important;
   right: var(--swiper-navigation-sides-offset, 10px) !important;
   left: auto !important;
+  width: 38px;
+  background-color:#c35b80 ;
   }
   
   .swiper-button-next {
@@ -447,7 +449,9 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  top: -19px;
+  top: -31px !important;
+  width: 38px;
+  background-color:#c35b80 ;
   }
   
   .swiper-button-next::after {
