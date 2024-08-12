@@ -437,6 +437,9 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
+  top: -19px;
+  right: var(--swiper-navigation-sides-offset, 10px) !important;
+  left: auto !important;
   }
   
   .swiper-button-next {
@@ -444,6 +447,7 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
+  top: -19px;
   }
   
   .swiper-button-next::after {
