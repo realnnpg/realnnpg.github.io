@@ -433,14 +433,14 @@
 } */
 
 .swiper-button-prev {
-  background-image: url(/Photos/left-arrow-solid-24.png) !important;
+  background-image: url(Photos/left-arrow-solid-24.png) !important;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
   }
   
   .swiper-button-next {
-  background-image: url(/Photos/right-arrow-solid-24.png) !important;
+  background-image: url(Photos/right-arrow-solid-24.png) !important;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
