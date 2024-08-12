@@ -427,11 +427,32 @@
   border-radius: 10px;
   border: 2px solid #00f;
 }
-.test-next, .swiper-button-prev {
+/*.swiper-button-next, .swiper-button-prev {
   color: #00f;
-  top: -50px; /* Position the buttons above the images */
-}
+  top: -50px;
+} */
 
+.swiper-button-prev {
+  background-image: url(/Photos/left-arrow-solid-24.png) !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  }
+  
+  .swiper-button-next {
+  background-image: url(/Photos/right-arrow-solid-24.png) !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  }
+  
+  .swiper-button-next::after {
+  display: none;
+  }
+  
+  .swiper-button-prev::after {
+  display: none;
+  }
 
 
 
