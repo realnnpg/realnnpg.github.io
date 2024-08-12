@@ -513,6 +513,9 @@ p {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 4px solid black;
 }
 
 .faq {
@@ -525,7 +528,7 @@ p {
 
 .faq-question {
   width: 100%;
-  background-color: #00796b;
+  background-color: #c35b80;
   color: white;
   border: none;
   padding: 10px;
@@ -538,11 +541,11 @@ p {
 }
 
 .faq-question:hover {
-  background-color: #004d40;
+  background-color: #9b4666;
 }
 
 .faq-answer {
-  background-color: #e0f7fa;
+  background-color: #f9dce4;
   padding: 10px;
   border-radius: 0 0 5px 5px;
   display: none;
