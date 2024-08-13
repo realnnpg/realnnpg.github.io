@@ -308,8 +308,6 @@
   filter: blur(4px);
   -webkit-filter: blur(4px);
   opacity: 0; /* Start with opacity 0 for fade-in effect */
-  animation: fadeIn 1s forwards; /* Apply fade-in animation */
-  animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
 }
 
 
@@ -337,6 +335,8 @@
     1px 1px 2px black,
     0 0 1em #ecebe2,
     0 0 0.2em #ecebe2;
+  animation: fadeIn 1s forwards; /* Apply fade-in animation */
+  animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
   animation: fadeIn 1.5s ease-out forwards; /* Apply fade-in animation with delay */
 }
 
