@@ -8,8 +8,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
-  opacity: 0; /* Start with opacity 0 for fade-in effect */
-  animation: fadeIn 1s forwards; /* Apply fade-in animation */
 }
 
 
@@ -309,6 +307,8 @@
   background-size: cover;
   filter: blur(4px);
   -webkit-filter: blur(4px);
+  opacity: 0; /* Start with opacity 0 for fade-in effect */
+  animation: fadeIn 1s forwards; /* Apply fade-in animation */
   animation: fadeIn 1s ease-out forwards; /* Apply fade-in animation */
 }
 
