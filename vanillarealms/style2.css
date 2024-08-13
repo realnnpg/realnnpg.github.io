@@ -425,7 +425,7 @@
   width: 100%;
   height: auto;
   border-radius: 10px;
-  border: 2px solid #00f;
+  border: 2px solid #c35b80;
 }
 /*.swiper-button-next, .swiper-button-prev {
   color: #00f;
@@ -437,8 +437,8 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  top: -31px !important;
-  right: var(--swiper-navigation-sides-offset, 10px) !important;
+  top: -40px !important;
+  /*right: var(--swiper-navigation-sides-offset, 10px) !important;*/
   left: auto !important;
   width: 38px;
   background-color:#c35b80 ;
@@ -449,7 +449,7 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  top: -31px !important;
+  top: -40px !important;
   width: 38px;
   background-color:#c35b80 ;
   }
