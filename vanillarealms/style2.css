@@ -325,6 +325,7 @@
     1px 1px 2px black,
     0 0 1em #ecebe2,
     0 0 0.2em #ecebe2;
+    animation: fadeIn 1.5s ease-out forwards; /* Apply fade-in animation with delay */
 }
 
 .photos-text {
