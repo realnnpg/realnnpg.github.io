@@ -342,7 +342,7 @@
 }
 
 /* Active state when the animation triggers */
-.feature-box.active {
+.feature-box {
   opacity: 1;
   transform: translateY(0);  /* Moves to original position */
 }
