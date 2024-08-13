@@ -45,7 +45,7 @@ function copyLink(element) {
 //ANIMATION FEATURES
 
 document.addEventListener("DOMContentLoaded", function() {
-  let featureBoxes = document.querySelectorAll('.feature-box');
+  let featureBoxes = document.querySelectorAll('.feature-item');
   let observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
