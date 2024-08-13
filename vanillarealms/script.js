@@ -1,3 +1,6 @@
+
+//SIDEBAR
+
 let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
 
@@ -15,6 +18,8 @@ function menuBtnChange() {
     closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
   }
 }
+
+//COPY LINK
 
 function copyLink(element) {
   // Create a temporary textarea element
@@ -37,8 +42,27 @@ function copyLink(element) {
   }, 3000);
 }
 
+//ANIMATION FEATURES
 
-//info
+document.addEventListener("DOMContentLoaded", function() {
+  let featureBoxes = document.querySelectorAll('.feature-box');
+  let observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              featureBoxes.forEach((box, index) => {
+                  setTimeout(() => {
+                      box.classList.add('active');
+                  }, index * 200);  // Delay each feature box animation by 200ms
+              });
+          }
+      });
+  }, { threshold: 0.5 });  // Trigger when 50% of the container is visible
+
+  observer.observe(document.querySelector('.features-container'));
+});
+
+
+//INFO
 
 document.addEventListener('DOMContentLoaded', () => {
     const questions = document.querySelectorAll('.faq-question');
@@ -52,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//swiper
+//SWIPER
+
 var swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -66,7 +91,7 @@ var swiper = new Swiper('.swiper-container', {
 
 
 
-//online_players
+//ONLINE PLAYERS
 
 function initServerData(serverIp,serverPort){
   const serverIpElement = document.getElementById('server-ip');
