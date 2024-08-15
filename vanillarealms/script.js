@@ -90,3 +90,19 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 
+//ONLINE PLAYERS
+
+function initServerData(){
+  fetch('https://mcapi.us/server/status?ip=play.vanillarealms.com&port=19132')
+  .then(response => response.json())
+  .then(data => handleServerStatus(data));
+  
+  function handleServerStatus(data){
+      const playerCounter = document.getElementById("player-count");
+      playerCounter.innerHTML = data.players.now;
+
+  } 
+}
+
+initServerData();
+  
