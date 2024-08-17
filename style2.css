@@ -87,7 +87,7 @@
   }
   
   .progress {
-    background-color: #ff007f;
+    background-color: #b200ff;
     height: 100%;
     border-radius: 5px;
     animation: growSkill 2s ease;
@@ -103,7 +103,7 @@
     display: inline-block;
     margin: 20px;
     padding: 20px;
-    border: 2px solid #ff007f;
+    border: 2px solid #b200ff;
     background-color: #333;
     border-radius: 20px;
     transition: transform 0.3s ease;
