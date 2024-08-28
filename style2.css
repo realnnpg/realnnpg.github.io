@@ -179,6 +179,17 @@
   
 
 
+  @media screen and (max-width: 768px) {
+    .connect-section {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .connect-section a:nth-last-child(-n+3) {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  }
 
 
 
