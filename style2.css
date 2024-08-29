@@ -25,6 +25,14 @@
     padding: 20px;
     text-align: center;
   }
+
+  .about_container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+
+  }
   
   .hero {
     height: 100vh;
