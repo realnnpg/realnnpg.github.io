@@ -1,0 +1,491 @@
+{# ----------------------------------------------------------------------------------------------- #}
+{# ----------------------------------------------------------------------------------------------- #}
+{# ----------------------------------- Radiant Theme for Tebex ----------------------------------- #}
+{# ------------------------- Made by Coldfire - https://coldfiredzn.com -------------------------- #}
+{# ----------------------------------------------------------------------------------------------- #}
+{# ----------------------------------------- v1.0.0 BETA ----------------------------------------- #}
+{# ----------------------------------------------------------------------------------------------- #}
+{# ----------------------------------------------------------------------------------------------- #}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>{{ store.name }} &bull; {{ __(page.title) }}</title>
+    <link rel="shortcut icon" href="{{ store.favicon }}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        
+        _gaq.push(['_setAccount', 'UA-36735942-3']);
+        _gaq.push(['_trackPageview']);
+        
+        {% if store.googleAnalytics %}
+            _gaq.push(['b._setAccount', '{{ store.googleAnalytics }}']);
+            _gaq.push(['b._trackPageview']);
+        {% endif %}
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    
+    <!-- Tebex.js -->
+    <script defer src="https://js.tebex.io/v/1.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+         {% include "radiant.css" %}
+    </style>
+    
+    <style>
+        @media (max-width: {{ config("ds_breakpoint") }}) {
+            .logo-ds-flex {grid-template-columns: auto;}
+            .status-box-container, .discord-box-container {display: none;}
+        }
+    </style>
+    
+  </head>
+  <body>
+
+        <div class="header-btn-row">
+            <div class="container">
+            <div class="flex-grow-1">
+                <a class="btn btn-link btn-home" href="{{ config("home_btn_url") }}">
+                    <i class="fa-solid fa-arrow-left"></i> {{ config("home_btn_text") }}
+                </a>
+            </div>
+            <div>
+                <button class="btn btn-link" data-toggle="modal" data-target="#supportModal">
+                    <i class="fa-solid fa-life-ring"></i> Support
+                </button>
+                <div class="giftcard-container">
+                    {% if config("gc_page") == "Yes" %}
+                        <a class="btn btn-header" href="/category/{{ config("gc_page_slug") }}">
+                            <i class="fa-solid fa-gift"></i> <span>Giftcards</span>
+                        </a>
+                    {% else %}
+                        {{ modules|raw }}
+                    {% endif %}
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="header"{% if config("header_particles") == "Yes" %} id="header-pjs"{% endif %} style="--header-background: url('{{ config("background_image") }}'); --background-position: {{ config("background_vertical_position") }}"></div>
+        
+        <div class="logo-ds-flex" data-breakpoint="{{ config("ds_breakpoint") }}">
+            <div class="status-box-container">
+                <div class="status-box">
+                    <div class="status-texts">
+                        <div class="sd-header">Play Now</div>
+                        <div class="sd-subtext">
+                            <div class="ip reel-1"><span id="ip">{{ config("server_ip") }}</span></div>
+                            <div class="reel-2">Click to copy IP</div>
+                        </div>
+                    </div>
+                    <div class="status-icon">
+                        <div class="icon-circle">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <div class="status-indicator">
+                            <div class="spinner-border" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="logo-container">
+                <a href="/">
+                    <img class="logo{% if config("animate_logo") == "Yes" %} logo-animated{% endif %}" alt="logo" src="{{ store.logo }}">
+                </a>
+            </div>
+            
+            <div class="discord-box-container">
+                <div class="discord-box"><a href="{{ config("discord_url") }}">
+                    <div class="discord-icon">
+                        <div class="icon-circle">
+                            <i class="fa-brands fa-discord"></i>
+                        </div>
+                    </div>
+                    <div class="discord-texts">
+                        <div class="sd-header">Discord</div>
+                        <div class="sd-subtext">
+                            <div class="discord-status reel-1" data-id="{{ config("discord_id") }}">Loading...</div>
+                            <div class="reel-2">Click to join now!</div>
+                        </div>
+                    </div>
+                </a></div>
+            </div>
+        </div>
+        
+        <div class="container main-container">
+            
+            <div class="row">
+                <div class="col-lg-3 sidebar-col">
+                    
+                    {% if basket.username %} 
+                    <div class="login-header">Shopping Cart</div>
+                    <div id="view-cart" class="login-box loggedin">
+                        <div class="oval oval-1"></div>
+                        <div class="oval oval-2"></div>
+                        <div class="oval oval-3"></div>
+                        <div class="oval oval-4"></div>
+                        <div class="login-skin-loggedin">
+                            <img src="https://mc-heads.net/avatar/{{ basket.ign }}/50" />
+                        </div>
+                        <div class="login-text">
+                            {{ basket.ign }}<br />
+                            <div class="logout-link">{{ _p(":count item(s)", basket.packages|length, {'count' : basket.packages|length}) }} <span>&bull; {{ _p(":amount :currency", basket.packages|length, {'amount' : basket.price|money, 'currency' : basket.currency}) }}</span></div>
+                        </div>
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="login-header">Welcome to {{ store.name }}</div>
+                    <div class="login-box loggedout" onclick="login()">
+                        <div class="oval oval-1"></div>
+                        <div class="oval oval-2"></div>
+                        <div class="oval oval-3"></div>
+                        <div class="oval oval-4"></div>
+                        <div class="login-skin">
+                            <img src="{{ config("welcome_skin_url") }}" />
+                        </div>
+                        <div class="login-text">
+                            Please login to start shopping
+                        </div>
+                        <div class="login-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    
+                    <div class="categories-sidebar-card">
+                        <div class="categories-sidebar">
+                            
+                            
+                            
+                            {% for category in store.categories %}
+                                {% if category.subcategories|length > 0 %}
+                                    <div class="category-dropdown-parent">
+                                        <div class="category category-dropdown-opener">
+                                            {% if config("sidebar_icons") == "Yes" %}
+                                            <div class="category-icon">
+                                                <img id="icon-{{ category.id }}" src="{{ category.image }}" />
+                                            </div>
+                                            {% endif %}
+                                            <div class="category-name{% if category.active %} active{% endif %}">
+                                                {{ category.name }} {% if category.active %}<i class="fa-solid fa-caret-up"></i>{% else %}<i class="fa-solid fa-caret-down"></i>{% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="category-dropdown{% if category.active %} active{% endif %}">
+                                            {% for subcategory in category.subcategories %}
+                                                <a class="category-dropdown-item{% if subcategory.active %} active{% endif %}" href="/category/{{ subcategory.id }}">{{ subcategory.name }}</a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                            
+                                            
+                                {% else %}
+                                    {% if (config("gc_page") == "Yes") and (category.id == config("gc_page_slug")) %}
+                                    {% else %}
+                                    <div class="category-wrapper">
+                                    <a href="/category/{{ category.id }}">
+                                        <div class="category">
+                                            {% if config("sidebar_icons") == "Yes" %}
+                                            <div class="category-icon">
+                                                <img id="icon-{{ category.id }}" src="{{ category.image }}" />
+                                            </div>
+                                            {% endif %}
+                                            <div class="category-name{% if category.active %} active{% endif %}">
+                                                {{ category.name }}
+                                            </div>
+                                        </div>
+                                    </a>
+                                    </div>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                            
+                            {% for page in store.pages %}
+                                <a href="/{{ page.slug }}"><div class="category">
+                                    {% if config("sidebar_icons") == "Yes" %}
+                                    <div class="category-icon">
+                                        <img id="icon-{{ page.slug }}" src="" />
+                                    </div>
+                                    {% endif %}
+                                    <div class="category-name{% if page.active %} active{% endif %}">
+                                        {{ page.title }}
+                                    </div>
+                                </div></a>
+                            {% endfor %}
+                        </div>
+                        <div class="top-donator-container">
+                            {{ modules|raw }}
+                        </div>
+                    </div>
+                    <div class="modules-container">
+                        {{ modules|raw }}
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        {# Thundurh #}
+                        <div class="login-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="supportModal" tabindex="-1" role="dialog" aria-labelledby="supportModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="package-modal-close" data-dismiss="modal"><i class="fa-solid fa-x"></i></div>
+                        <div class="support-modal-title">Support</div>
+                        <div class="support-modal-introduction">{{ config("support_intro") }}</div>
+                        <div class="support-modal-tebex">
+                            <div class="support-text">To inquire about the <span>checkout process</span> (refunds, declined payments, subscriptions, and more), please contact Tebex:</div>
+                            <a class="btn-support btn-tebex" href="https://www.tebex.io/support-customer">Tebex Customer Support</a>
+                        </div>
+                        <div class="support-modal-webstore">
+                            <div class="support-text">To inquire about any of our <span>products</span>, and for other <span>minor inquiries</span> please contact us through Discord or Email.</div>
+                            <div class="support-flex">
+                                {% if config("support_contact_method") == "Discord" %}
+                                <a class="btn-support btn-discord" href="{{ config("discord_url") }}">Discord Server</a>
+                                {% elseif config("support_contact_method") == "Email" %}
+                                <button class="btn-support btn-email" data-original-title="Click to Copy" data-toggle="tooltip" data-placement="top"><i class="fa-regular fa-copy"></i> <span>{{ config("support_email") }}</span></button>
+                                {% else %}
+                                <a class="btn-support btn-discord" href="{{ config("discord_url") }}">Discord Server</a>
+                                <button class="btn-support btn-email" data-original-title="Click to Copy" data-toggle="tooltip" data-placement="top"><i class="fa-regular fa-copy"></i> <span>{{ config("support_email") }}</span></button>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="hidden-page"></div>
+        
+        <div class='al'>Your website has been disabled because it has been detected running a leaked copy of Radiant. If your copy is not leaked, visit https://coldfiredzn.com/discord for help</div>
+        
+        
+        <div class="cart-menu">
+            <div class="cart-menu-header">
+                <div class="cart-title">Cart</div>
+                <div class="cart-buttons">
+                    <div class="dropdown cart-currency">
+                        <button class="btn btn-currency dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ basket.currency }}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {% for currency in store.currencies %}
+                                {% if currency.code in [store.currency, "AUD", "BRL", "CAD", "DKK", "EUR", "NOK", "NZD", "GBP", "SEK", "USD", "PLN"] %}
+                                    <li {% if basket.currency == currency.code %}class="active"{% endif %}>
+                                    <a class="dropdown-item" href="?currency={{ currency.code }}">{{ currency.code }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                        
+                    {% if basket.username %} 
+                        <a href="/checkout/logout" class="btn btn-package-remove">{{ __("Logout") }}</a>
+                    {% endif %}
+                    
+                    <div class="cart-close" data-dismiss="modal"><i class="fa-solid fa-x"></i></div>
+                </div>
+            </div>
+            <div class="cart-menu-body">
+                {% if basket.packages|length > 0 %}
+                    <form id="updateQuantity" method="post" action="/checkout/update">
+                    {% for package in basket.packages %}
+                        <div class="cart-package">
+                            <div class="cart-img">
+                                <img src="{{ package.image.url }}" />
+                            </div>
+                            <div class="cart-details">
+                                <div class="cart-name">
+                                    {#{% if package.ign != "" %}<i class="fa-solid fa-gift"></i> {% endif %}#}
+                                    {% if package.options %} 
+                                        <div class="options-frame" data-toggle="tooltip" data-placement="top" data-html="true" title="{% for option in package.options %}<div class='package-options'><div><strong>{{ option.name }}</strong></div><div>{{ option.value|raw }}</div></div>{% endfor %}"><i class="fa-solid fa-gear"></i></div>
+                                    {% endif %}
+                                    {{ package.name[:25] }}
+                                </div>
+                                <div class="cart-price">
+                                    {#{{ basket.packages[0].price|money }} <small>{{ basket.currency }}</small> every {{ basket.packages[0].expiryPeriod }}#}
+                                    {% if package.expiryPeriod  > 0 %}
+                                        {{ package.price|money }} {{ basket.currency }} every {{ package.expiryPeriod }}
+                                    {% else %}
+                                        {{ package.price|money }} {{ basket.currency }}
+                                    {% endif %}
+                                    
+                                </div>
+                                <div class="cart-quantity">
+                                    {% if package.expiryPeriod == 0 %}
+                                    <div class="quantity-selector{% if package.price == 0.00 or package.disableQuantity %} disabled{% endif %}">
+                                        <div class="quantity-minus"><i class="fa-solid fa-minus"></i></div>
+                                        <div class="quantity-number"><input type="text" name="quantity[{{ package.id }}]" value="{{ package.quantity }}" readonly></div>
+                                        <div class="quantity-plus"><i class="fa-solid fa-plus"></i></div>
+                                    </div>
+                                    <i class="submit-quantity fa-solid fa-check"></i>
+                                    {% endif %}
+                                    <a class="cart-remove" href="/checkout/packages/remove/{{ package.id }}">Remove</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </form>
+                {% else %}
+                    <div class="cart-empty">You have no packages added to your cart, please continue shopping!</div>
+                {% endif %}
+            </div>
+            {% if basket.packages|length > 0 %}
+            <div class="cart-menu-footer">
+                <div class="cart-total-box">
+                    <div class="cart-total">{{ __("Total") }}</div>
+                    <div class="cart-total-value">{{ basket.price|money }} {{ basket.currency }}</div>
+                </div>
+                {#<a href="/checkout/basket" class="btn btn-package-add">{{ __("Checkout") }}</a>#}
+                <tebex-checkout ident="{{ basket.ident }}" id="tebex-checkout">
+                    <button type="submit" class="btn btn-package-add">
+                        {{ __("Checkout") }}
+                    </button>
+                </tebex-checkout>
+                <script type="text/javascript">
+                    document.getElementById("tebex-checkout").addEventListener("payment:complete", () => {
+                        document.location.href="/";
+                    });
+                </script>
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="cart-menu-overlay"></div>
+        
+        <div class="footer-spacer"></div>
+        <div class="footer">
+            <div class="container d-flex">
+                <div class="copyright-container">
+                    <div class="copyright">
+                        2024 © <span>{{ store.name }}</span>. All rights reserved.
+                    </div>
+                    <div class="copy-subtext">
+                        Not affiliated with Mojang AB or Microsoft
+                    </div>
+                </div>
+                {% if store.locales %}
+                <div class="footer-language">
+                    <div class="dropup language">
+                        <button type="button" class="btn btn-footer dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            {% for locale, name in store.locales %}
+                                <a class="dropdown-item" href="?locale={{ locale }}">{{ name }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% if (config("tiktok_link") != "") or (config("instagram_link") != "") or (config("youtube_link") != "") or (config("x_link") != "") or (config("facebook_link") != "") %}
+                <div class="footer-social-media"{% if store.locales is empty %} style="margin-left: 1rem;"{% endif %}>
+                    <div class="social-media-box">
+                        {% if config("tiktok_link") != "" %}
+                            <a class="social-link" href="{{ config("tiktok_link") }}"><i class="fa-brands fa-tiktok"></i></a>
+                        {% endif %}
+                        {% if config("instagram_link") != "" %}
+                            <a class="social-link" href="{{ config("instagram_link") }}"><i class="fa-brands fa-instagram"></i></a>
+                        {% endif %}
+                        {% if config("youtube_link") != "" %}
+                            <a class="social-link" href="{{ config("youtube_link") }}"><i class="fa-brands fa-youtube"></i></a>
+                        {% endif %}
+                        {% if config("x_link") != "" %}
+                            <a class="social-link" href="{{ config("x_link") }}"><i class="fa-brands fa-x-twitter"></i></a>
+                        {% endif %}
+                        {% if config("facebook_link") != "" %}
+                            <a class="social-link" href="{{ config("facebook_link") }}"><i class="fa-brands fa-facebook"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+                <div class="credit-icon flex-grow-1">
+                    <a href="https://coldfiredzn.com" target="_blank"><img src="https://cdn.coldfiredzn.com/radiant/coldfire.webp" /></a>
+                </div>
+            </div>
+        </div>
+    
+    <div class="modal" id="popup-modal" tabindex="-1" role="dialog"></div>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" id="a38a994704f662d083b945951c84a856" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.0/dist/sweetalert2.all.min.js" integrity="sha256-tGZXBB9uK3MK1zLsI8b/1gZYQcBl8TMTi52kA2RmEKc=" crossorigin="anonymous"></script>
+    {% if config("header_particles") == "Yes" %}<script src="https://cdn.jsdelivr.net/npm/tsparticles@3.5.0/tsparticles.bundle.min.js" integrity="sha256-TDVBfv16L7aCIhk+iOR1cwAT/HDOsBAxKRbA+CWjx10=" crossorigin="anonymous"></script>{% endif %}
+    
+    <script>
+        {% include "radiant.js" %}
+    </script>
+
+    
+    {% if page.category == "checkout" %}
+      <script src="https://js.stripe.com/v2/"></script>
+    {% endif %}
+    
+    <script src="/templates/209/js/skin.min.js"></script>
+    <script src="/templates/209/js/site.js"></script>
+    
+     <script>
+            jQuery(function(){
+                var countdowns = $(".countdown-to");
+                countdowns.each(function(){
+                   setInterval(function(ele) {
+                       timeLeft = parseInt(ele.attr("data-countdown"));
+                       if (timeLeft == 0) {
+                           ele.html("Time Expired!");
+                       } else {
+                       timeLeft--;
+                       ele.attr("data-countdown", timeLeft);
+                      var days = Math.floor(timeLeft / (60 * 60 * 24));
+                      var hours = Math.floor((timeLeft % (60 * 60 * 24)) / (60 * 60));
+                      var minutes = Math.floor((timeLeft % (60 * 60)) / (60));
+                      var seconds = Math.floor((timeLeft % 60));
+                      ele.html(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+                       }
+                   }, 1000, jQuery(this));
+                });
+            });
+
+        </script>
+  </body>
+</html>

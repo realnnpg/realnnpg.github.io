@@ -1,0 +1,55 @@
+<div class="modal-dialog modal-package" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="package-modal-info">
+                <div class="package-info-group">
+                    <div class="p-img">
+                        <img src="{{ package.image.url }}" />
+                    </div>
+                    <div class="p-name">{{ package.name }}</div>
+                    <div class="p-price">
+                        {% if package.customPrice %}
+                            {{ __("You decide how much to pay.") }}
+                        {% elseif package.price == 0.00 %}
+                            {{ __("This item is free.") }}
+                        {% else %}
+                            {{ package.price|money }} {{ basket.currency }}
+                        {% endif %}
+                    </div>
+                    <div class="p-button"{% if package.purchasable == false %} data-toggle="tooltip" data-placement="top" title="{{ package.reason }}"{% endif %}>
+                        {% if package.basket %}
+                            <a href="/checkout/packages/remove/{{ package.id }}" class="btn btn-package-remove cart-edit">{{ __("Remove") }}</a>
+                        {% else %}
+                            {% if package.type != "single" %}
+                                {#<a href="/checkout/packages/add/{{ package.id }}/subscribe" class="btn btn-package-add cart-add" {% if package.purchasable == false %}disabled{% endif %}>{{ __("Subscribe") }}</a>#}
+                                <button data-link="/checkout/packages/add/{{ package.id }}/subscribe" class="btn btn-package-add cart-edit" {% if package.purchasable == false %}disabled{% endif %}>{{ __("Subscribe") }}</button>
+                            {% endif %}
+                            {% if package.type != "subscription" %}
+                                {#<a href="/checkout/packages/add/{{ package.id }}/single" class="btn btn-package-add cart-add" {% if package.purchasable == false %}disabled{% endif %}>{{ __("Add to cart") }}</a>#}
+                                <button data-link="/checkout/packages/add/{{ package.id }}/single" class="btn btn-package-add cart-edit" {% if package.purchasable == false %}disabled{% endif %}>{{ __("Add to cart") }}</button>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                    {% if package.disable_gifting == false and package.storeGiftingEnabled %}
+                    <div class="p-gifting">
+                        <button class="btn btn-gift {{ package.type != "single" and package.type != "subscription" ? "btn-gift-xl" }}">{{ __("Gift this package") }} <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                        {% if package.disable_gifting == false and package.storeGiftingEnabled %}
+                            <div class="gift-fields">
+                                <form name="gift-form" method="get" action="/checkout/packages/add/{{ package.id }}/single/gift">
+                                    <input type="text" name="username" placeholder="Username" />
+                                    <button type="submit" class="btn btn-successful btn-submit-gift">Gift</button>
+                                </form>
+                            </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="package-modal-description">
+                <div class="package-modal-close" data-dismiss="modal"><i class="fa-solid fa-x"></i></div>
+                {{ package.description|raw }}
+            </div>
+        </div>
+    </div>
+</div>
+        

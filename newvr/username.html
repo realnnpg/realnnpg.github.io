@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %} 
+        <div class="card">                                                                                                                                                                                                     <div id="login-page">
+            
+                    <div class="login-page-header">{{ __("Please enter your username to continue") }}</div>
+                    {% if config("bedrock_support") == "Yes" %}
+                    <div class="login-selection">
+                        <div class="login-select-btn active">
+                            <div class="login-select-icon"><i class="fa-solid fa-computer"></i></div>
+                            <div class="login-select-text">Minecraft:<br />Java Edition</div>
+                        </div>
+                        <div class="login-select-btn">
+                            <div class="login-select-icon"><i class="fa-solid fa-gamepad"></i></div>
+                            <div class="login-select-text">Minecraft:<br />Bedrock Edition</div>
+                        </div>
+                    </div>
+                    {% endif %}
+                
+                    <form id="login-form" method="post"{% if config("bedrock_support") == "Yes" %} data-prefix="{{ config('bedrock_prefix') }}" data-mode="java"{% endif %}>
+                        <span class="case-warning">Case sensitive, no spaces</span>
+                        <div class="login-page-flex">
+                            <input type="text" name="ign" class="form-control" control-id="ControlID-1" placeholder="Username">
+                            <button class="btn btn-theme" type="submit" control-id="ControlID-2"><i class="fa-solid fa-right-to-bracket"></i></button>
+                        </div>
+                    </form>
+                    
+                    <div class="login-helper">
+                        {{ config("login_description")|raw }}
+                    </div>
+                
+            
+                {#{{ loginform|raw }}#}
+            </div>
+        </div>  
+{% endblock %}
