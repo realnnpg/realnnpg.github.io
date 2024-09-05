@@ -12,9 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Retrieve an array of form inputs within the form
             var formInputs = form.querySelectorAll("[name]:not([type=submit])");
             var firstInput = true;
-
-
-
+            
             var formInputIdx;
             for (formInputIdx = 0; formInputIdx < formInputs.length; formInputIdx++) {
                 var formInput = formInputs[formInputIdx];
