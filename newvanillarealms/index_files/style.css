@@ -1,7 +1,7 @@
 :root {
     --header-height: 570px;
     /* The height of the header. This can be in PX or REM */
-    --logo-height: 170px;
+    --logo-height: 140px;
     /* The height of the logo. This can be in PX or REM */
     --header-margin-top: 9rem;
     /* The distance of the logo, discord, and server status texts from the top of the header */
