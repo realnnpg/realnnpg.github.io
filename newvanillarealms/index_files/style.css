@@ -820,7 +820,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.04);*/
 
 .donator-title {
     font-family: 'Poppins', sans-serif;
-    color: var(--primary-color);
+    color: #4bc02a;
     font-weight: 700;
     font-size: 0.85rem;
     margin-top: 0.35rem;
@@ -1024,6 +1024,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.04);*/
 .support-box {
     border: 3px solid var(--support-box);
     background-color: var(--support-background);
+    width: 100%;
 }
 
 .support-title {
