@@ -29,6 +29,10 @@
     /* The color used as the border for the refund box on the home page */
     --refund-background: rgba(41, 89, 210, 0.1);
     /* The background color of the refund box. Recommended to use a darker version of the --refund-box color. Keep the 0.1 value on the end as this represents opacity and is needed for the design (only change the first 3 numbers, the RGB code) */
+    --server-box: #228B22;
+    /* The color used as the border for the refund box on the home page */
+    --refund-background: rgba(41, 89, 210, 0.1);
+
 }
 
 body {
@@ -988,7 +992,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.04);*/
     top: 1.7rem
 }
 
-/* ----------- Support & Refund ---------- */
+/* ----------- Support & Refund & Server ---------- */
 
 .index-info {
     display: flex;
@@ -1033,12 +1037,12 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.04);*/
 
 .refund-box {
     border: 3px solid var(--refund-box);
-    background-color: var(--refund-background)
+    background-color: var(--refund-background);
+    width: 100%;
 }
 
 .refund-title {
     background-color: var(--refund-box);
-    /* %%__USERNAME__%% */
 }
 
 .support-box span,
@@ -1049,6 +1053,49 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.04);*/
 
 .support-description a,
 .refund-description a {
+    color: #FFF;
+}
+
+
+
+.server-title {
+    font-family: 'Poppins', sans-serif;
+    margin-top: -2rem;
+    margin-bottom: 0.5rem;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+}
+
+.server-box {
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.server-box {
+    border: 3px solid var(--server-box);
+    background-color: var(--server-background);
+    width: 100%;
+}
+
+.server-title {
+    background-color: var(--server-box);
+}
+
+.server-box span {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+
+.server-description a {
     color: #FFF;
 }
 
