@@ -32,6 +32,8 @@
     --server-box: #228B22;
     /* The color used as the border for the refund box on the home page */
     --refund-background: rgba(41, 89, 210, 0.1);
+    --staff-box: #FFEA00;
+ 
 
 }
 
@@ -1099,6 +1101,46 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.04);*/
     color: #FFF;
 }
 
+.staff-title {
+    font-family: 'Poppins', sans-serif;
+    margin-top: -2rem;
+    margin-bottom: 0.5rem;
+    color: #000000;
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+}
+
+.staff-box {
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.staff-box {
+    border: 3px solid var(--staff-box);
+    background-color: var(--staff-background);
+    width: 100%;
+}
+
+.staff-title {
+    background-color: var(--staff-box);
+}
+
+.staff-box span {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+
+.staff-description a {
+    color: #FFF;
+}
 /* ---------- Login Modal ----------- */
 
 .modal-content {
@@ -2263,11 +2305,14 @@ select:focus {
     position: relative;
     overflow: hidden;
     transition: .5s;
+    align-items: center;
+    display: inline-block;
 }
 
 .gc-btn-gold {
     background-color: rgba(252, 199, 10, .4);
     box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.15);
+    width: 40%;
 }
 
 .gc-btn-gold:hover {
@@ -2275,10 +2320,6 @@ select:focus {
     box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.3);
 }
 
-.gc-btn-gold.active {
-    background-color: rgba(252, 199, 10, .7);
-    box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.5);
-}
 
 .gc-btn-gold .gc-extra {
     color: #FFB800
