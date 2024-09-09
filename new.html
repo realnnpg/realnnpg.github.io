@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Template</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #toggleTheme {
+            background-color: #444;
+            color: white;
+        }
+
+        #toggleTheme.light-mode {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .input-box {
+            margin-top: 20px;
+        }
+
+        .input-box input {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleTheme">Toggle Color Theme</button>
+
+    <div class="container">
+        <h1>Welcome to Your Page</h1>
+        <p>This is a simple one-page template with a button to change the color theme.</p>
+
+        <div class="input-box">
+            <input type="text" placeholder="Enter something here...">
+        </div>
+    </div>
+
+    <script>
+        const toggleThemeButton = document.getElementById('toggleTheme');
+        const body = document.body;
+
+        toggleThemeButton.addEventListener('click', function() {
+            if (body.style.backgroundColor === 'black') {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
+                toggleThemeButton.classList.add('light-mode');
+            } else {
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
+                toggleThemeButton.classList.remove('light-mode');
+            }
+        });
+    </script>
+
+</body>
+</html>
