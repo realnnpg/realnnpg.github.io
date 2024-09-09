@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>nnpg</title>
+    <title>My Website</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-
     <style>
-
 
 @import "https://unpkg.com/open-props/easings.min.css";
 
@@ -90,7 +86,11 @@
   }
 }
         
-    </style> 
+    </style>
+  </head>
+  <body>
+    <main>
+        <h1>Welcome to My Website</h1>
         <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
             <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
               <mask class="moon" id="moon-mask">
@@ -110,6 +110,7 @@
                </g>
             </svg>
           </button>
+    </main>
     <script>
 
 const storageKey = 'theme-preference'
@@ -171,7 +172,6 @@ window
     setPreference()
   })
         
-
     </script>
   </body>
 </html>
