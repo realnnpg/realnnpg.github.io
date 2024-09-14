@@ -1,277 +1,508 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Vanilla Realms </title>
-  <link rel="stylesheet" href="style2.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vanilla Realms • Welcome</title>
+    <link rel="shortcut icon"
+        href="https://dunb17ur4ymx4.cloudfront.net/webstore/favicons/316cfd4e2a62045d442690a31d0a268103b1a7c1.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
 
-  <div class="sidebar">
-    <div class="logo-details">
-      <img src='Photos/vr_logo.webp'>
-      <div class="logo_name">Vanilla Realms</div>
-      <i class='bx bx-menu' id="btn"></i>
-    </div>
-    <ul class="nav-list">
-      <li>
-        <a href="index.html">
-          <i class='bx bx-home'></i>
-          <span class="links_name">Home</span>
-        </a>
-        <span class="tooltip">Home</span>
-      </li>
-      <li>
-        <a href="javascript:void(0)" onclick="copyLink(this)">
-          <i class='bx bx-play-circle'></i>
-          <span class="links_name" id="copylink">play.vanillarealms.com</span>
-        </a>
-        <span class="tooltip">Join Us</span>
-      </li>
-      <li>
-        <a href="https://discord.com/invite/vanillarealms" target="_blank">
-          <i class='bx bx-chat'></i>
-          <span class="links_name">Discord</span>
-        </a>
-        <span class="tooltip">Discord</span>
-      </li>
-      <li>
-        <a href="https://store.vanillarealms.com/" target="_blank">
-          <i class='bx bx-shopping-bag'></i>
-          <span class="links_name">Store</span>
-        </a>
-        <span class="tooltip">Store</span>
-      </li>
-      <li>
-        <a href="staff_apps.html">
-          <i class='bx bx-folder'></i>
-          <span class="links_name">Staff Applications</span>
-        </a>
-        <span class="tooltip">Staff Applications</span>
-      </li>
-      <li>
-        <a href="info.html">
-          <i class='bx bx-info-circle'></i>
-          <span class="links_name">Info</span>
-        </a>
-        <span class="tooltip">Info</span>
-      </li>
-      <li>
-        <a href="rules.html">
-          <i class='bx bx-book'></i>
-          <span class="links_name">Rules</span>
-        </a>
-        <span class="tooltip">Rules</span>
-      </li>
-      <li>
-        <a href="vote_lnks.html">
-          <i class='bx bx-upvote'></i>
-          <span class="links_name">Voting</span>
-        </a>
-        <span class="tooltip">Voting</span>
-      </li>
-      <li>
-        <a href="legal.html"">
-          <i class='bx bx-cog'></i>
-          <span class=" links_name">Legal</span>
-        </a>
-        <span class="tooltip">Legal</span>
-      </li>
-    </ul>
-  </div>
+    <div class="header-btn-row">
+        <div class="container">
+            <div class="flex-grow-1">
+                <a class="btn btn-link btn-home" href="index.html">
+                    <i class="fa-solid fa-arrow-left"></i> Return home
+                </a>
+            </div>
+            <div>
+                <button class="btn btn-link" data-toggle="modal" data-target="#supportModal">
+                    <i class="fa-solid fa-life-ring"></i> Support
+                </button>
 
-
-
-
-
-  <div class="home_container">
-
-    
-    
-    <div class="rules_container">
-      <h1>Discord Rules</h1>
-      <div class="rules">
-        <div class="rule">
-          <h2>Rule 1</h2>
-          <p>Harassment or predatory behavior is not allowed, in any form.</p>
+            </div>
         </div>
-        <div class="rule">
-          <h2>Rule 2</h2>
-          <p>Keep the chats clean & family friendly. Don’t post gore/inappropriate topics/etc.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 3</h2>
-          <p>No political debates or heavy / sensitive topics; keep the chat civil.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 4</h2>
-          <p>Do not start or participate in drama.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 5</h2>
-          <p>Speak English only in text and voice channels.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 6</h2>
-          <p>Do not tag either the owner or staff. If you have a problem, please make a ticket.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 7</h2>
-          <p>Don’t unnecessarily Tag other players.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 8</h2>
-          <p>Use channels for their dedicated purpose.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 9</h2>
-          <p> Do NOT impersonate staff or any other member of the community.
-          </p>
-        </div>
-        <div class="rule">
-          <h2>Rule 10</h2>
-          <p>Any variation of inappropriate language, including racial slurs, whether it be non-English or otherwise, or any term used in a modern OR historical context to degrade, demean, or reduce any person of any race to a sub-class or less-than-equal stature is NOT allowed</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 11</h2>
-          <p>No advertisement or messaging of non-related servers to people in the discord.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 12</h2>
-          <p>No self-advertising of YouTube or Twitch platforms without staff approval first. Please make a ticket. (This does include streaming in discord voice channels).</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 13</h2>
-          <p>Don't join voice channels to scream/use a voice changer/spam a soundboard or any action that can be considered obnoxious and harmful to others.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 14</h2>
-          <p>Do not ask for compensation for items that were lost/destroyed in the game by conventional means.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 15</h2>
-          <p>Do not make more than one ticket for one specific issue.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 16</h2>
-          <p>Do not sell in-game items for real-life currency, in-game, discord, or otherwise.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 17</h2>
-          <p>Don't leave and rejoin the server or use an alt to get around mutes and punishments.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 18</h2>
-          <p>All rules apply to voice channels.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 19</h2>
-          <p>Your account/the account you play on is your responsibility. If someone else plays on your account/the account you play on, it is still your responsibility if they do something</p>
-        </div>
-      </div>
     </div>
 
+    <div class="header" id="header-pjs"
+        style="--header-background: url(&#39;https://steamuserimages-a.akamaihd.net/ugc/2310974141604980016/B4EF3A7A2D1772DE26B1A6F51CE33A04FD8BB917/?imw=5000&amp;imh=5000&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=false&#39;); --background-position: top">
+        <canvas data-generated="true" style="width: 100%; height: 100%; pointer-events: none;" aria-hidden="true"
+            width="3820" height="1140"></canvas>
+    </div>
+
+    <div class="logo-ds-flex" data-breakpoint="1100px">
+        <div class="status-box-container">
+            <div class="status-box">
+                <div class="status-texts">
+                    <div class="sd-header">Play Now</div>
+                    <div class="sd-subtext">
+                        <div class="ip reel-1"><span id="ip">play.vanillarealms.com</span></div>
+                        <div class="reel-2">Click to copy IP</div>
+                    </div>
+                </div>
+                <div class="status-icon">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <div class="status-indicator">45</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo-container">
+            <a href="https://store.vanillarealms.com/">
+                <img class="logo" alt="logo" src="./assets/f56ef34144a83f3c76d02c0644162248dc8ee340.png">
+            </a>
+        </div>
+
+        <div class="discord-box-container">
+            <div class="discord-box"><a href="https://discord.gg/vanillarealms" target="_blank">
+                    <div class="discord-icon">
+                        <div class="icon-circle">
+                            <i class="fa-brands fa-discord"></i>
+                        </div>
+                    </div>
+                    <div class="discord-texts">
+                        <div class="sd-header">Discord</div>
+                        <div class="sd-subtext">
+                            <div class="discord-status reel-1" data-id="783544962507079680">
+                                <span class="status-number">???</span> users online
+                            </div>
+                            <div class="reel-2">Click to join now!</div>
+                        </div>
+                    </div>
+                </a></div>
+        </div>
+    </div>
+
+    <div class="container main-container">
+
+        <div class="row">
+            <div class="col-lg-3 sidebar-col">
+
+                <div class="login-header">Welcome to Vanilla Realms</div>
 
 
 
-    <div class="rules_container">
-      <h1>Server Rules</h1>
-      <div class="rules">
-        <div class="rule">
-          <h2>Rule 1</h2>
-          <p>Do not cheat (hacked clients, abusive mods, etc.)</p>
+                <div class="categories-sidebar-card">
+                    <div class="categories-sidebar">
+
+
+
+                        <div class="category-wrapper">
+                            <a href="rules.html">
+                                <div class="category">
+                                    <div class="category-name active">
+                                        📜 Rules
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-wrapper">
+                            <a href="info.html">
+                                <div class="category">
+                                    <div class="category-name">
+                                        🔎 Info
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="category-dropdown-parent">
+                            <div class="category category-dropdown-opener">
+                                <div class="category-name">
+                                    🛒 Store <i class="fa-solid fa-caret-down"></i> </div>
+                            </div>
+                            <div class="category-dropdown">
+                                <a class="category-dropdown-item"
+                                    href="https://store.vanillarealms.com">🛖 Home</a>
+                                <a class="category-dropdown-item"
+                                    href="https://store.vanillarealms.com/category/ranks">👑 Ranks</a>
+                                <a class="category-dropdown-item"
+                                    href="https://store.vanillarealms.com/category/crate-keys"> 🗝️ Crate Keys</a>
+                                <a class="category-dropdown-item"
+                                    href="https://store.vanillarealms.com/category/extras">🏠 Claim Blocks</a>
+                            </div>
+                        </div>
+
+                        <div class="category-wrapper">
+                            <a href="staff-apps.html">
+                                <div class="category">
+                                    <div class="category-name">
+                                        🗂️ Staff Applications
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="category-wrapper">
+                            <a href="voting.html">
+                                <div class="category">
+                                    <div class="category-name">
+                                        🗳️ Voting
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="top-donator-container">
+                        <div class="module-topdonator top-donator">
+                            <div class="donator-text">
+                                <div class="donator-title"><i class="fa-solid fa-crown"></i> Server Owner</div>
+                                <div class="donator-subtitle">
+                                    Thundurh
+                                </div>
+                            </div>
+                            <div class="donator-img">
+                                <img src="./assets/thundurh.png">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-9">
+                <div class="card">
+                    <div class="index-header-group">
+                        <div class="store-heading">Rules:</div>
+
+
+
+                    </div>
+                    <div class="store-description">
+
+                    </div>
+                    <div class="index-widget-flexbox">
+                        <div class="module-payments widget">
+                            <div class="w-icon">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="index-info">
+                        <div class="server-box">
+                            <div class="server-title">
+                                Server Rules
+                            </div>
+                            <div class="server-description">
+                                Rule 1
+                                <br>
+                                Do not cheat (hacked clients, abusive mods, etc.)
+                                <hr>
+                                Rule 2
+                                <br>
+                                Do not spam or flood chat.
+                                <hr>
+                                Rule 3
+                                <br>
+                                Do not abuse claim trust. Unclaimed land is free game.
+                                <hr>
+                                Rule 4
+                                <br>
+                                Do not bypass PvP protection plugins.
+                                <hr>
+                                Rule 5
+                                <br>
+                                Stay family-friendly. No inappropriate chats, names, skins, or builds.
+                                <hr>
+                                Rule 6
+                                <br>
+                                Do not claim or build within 8 chunks of a pre-existing claim. Targeting another
+                                player's claim line is not allowed.
+                                <hr>
+                                Rule 7
+                                <br>
+                                Do not discuss real world, current politics, religion, illicit drugs, or other sensitive
+                                topics.
+                                <hr>
+                                Rule 8
+                                <br>
+                                Predatory behavior will not be tolerated.
+                                <hr>
+                                Rule 9
+                                <br>
+                                Do not harass other players. Including chat, tp spamming, and begging.
+                                <hr>
+                                Rule 10
+                                <br>
+                                Do not share personal information in public chats. While we discourage sharing personal
+                                information in general, if you insist on doing so, please keep it in private messages.
+                                <hr>
+                                Rule 11
+                                <br>
+                                Staff impersonation or disrespect is not permitted.
+                                <hr>
+                                Rule 12
+                                <br>
+                                Do not falsely report other players.
+                                <hr>
+                                Rule 13
+                                <br>
+                                Punishment or ban evasion is not allowed.
+                                <hr>
+                                Rule 14
+                                <br>
+                                Do not speak other languages besides English in public chat. Local and private messages
+                                do not apply.
+                                <hr>
+                                Rule 15
+                                <br>
+                                Do not advertise any other servers (Hypixel is an exception).
+                                <hr>
+                                Rule 16
+                                <br>
+                                Do not intentionally start or encourage drama.
+                                <hr>
+                                Rule 17
+                                <br>
+                                Do not sell in-game items for real-life currency via in-game, discord, or otherwise.
+                                <hr>
+                                Rule 18
+                                <br>
+                                Do not create lag machines.
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="refund-box">
+                            <div class="refund-title">
+                                Discord Rules
+                            </div>
+                            <div class="refund-description">
+                                Rule 1
+                                <br>
+                                Harassment or predatory behavior is not allowed, in any form.
+                                <hr>
+                                Rule 2
+                                <br>
+                                Keep the chats clean & family friendly. Don’t post gore/inappropriate topics/etc.
+                                <hr>
+                                Rule 3
+                                <br>
+                                No political debates or heavy / sensitive topics; keep the chat civil.
+                                <hr>
+                                Rule 4
+                                <br>
+                                Do not start or participate in drama.
+                                <hr>
+                                Rule 5
+                                <br>
+                                Speak English only in text and voice channels.
+                                <hr>
+                                Rule 6
+                                <br>
+                                Do not tag either the owner or staff. If you have a problem, please make a ticket.
+                                <hr>
+                                Rule 7
+                                <br>
+                                Don’t unnecessarily Tag other players.
+                                <hr>
+                                Rule 8
+                                <br>
+                                Use channels for their dedicated purpose.
+                                <hr>
+                                Rule 9
+                                <br>
+                                Do NOT impersonate staff or any other member of the community.
+                                <hr>
+                                Rule 10
+                                <br>
+                                Any variation of inappropriate language, including racial slurs, whether it be
+                                non-English or otherwise, or any term used in a modern OR historical context to degrade,
+                                demean, or reduce any person of any race to a sub-class or less-than-equal stature is
+                                NOT allowed
+                                <hr>
+                                Rule 11
+                                <br>
+                                No advertisement or messaging of non-related servers to people in the discord.
+                                <hr>
+                                Rule 12
+                                <br>
+                                No self-advertising of YouTube or Twitch platforms without staff approval first. Please
+                                make a ticket. (This does include streaming in discord voice channels).
+                                <hr>
+                                Rule 13
+                                <br>
+                                Don't join voice channels to scream/use a voice changer/spam a soundboard or any action
+                                that can be considered obnoxious and harmful to others.
+                                <hr>
+                                Rule 14
+                                <br>
+                                Do not ask for compensation for items that were lost/destroyed in the game by
+                                conventional means.
+                                <hr>
+                                Rule 15
+                                <br>
+                                Do not make more than one ticket for one specific issue.
+                                <hr>
+                                Rule 16
+                                <br>
+                                Do not sell in-game items for real-life currency, in-game, discord, or otherwise.
+                                <hr>
+                                Rule 17
+                                <br>
+                                All rules apply to voice channels.
+                                <hr>
+                                Rule 18
+                                <br>
+                                Your account/the account you play on is your responsibility. If someone else plays on
+                                your account/the account you play on, it is still your responsibility if they do
+                                something
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="rule">
-          <h2>Rule 2</h2>
-          <p>Do not spam or flood chat.</p>
+    </div>
+
+    <!--Support button(top right)-->
+    <div class="modal fade" id="supportModal" tabindex="-1" role="dialog" aria-labelledby="supportModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="package-modal-close" data-dismiss="modal"><i class="fa-solid fa-x"></i></div>
+                    <div class="support-modal-title">Support</div>
+                    <div class="support-modal-introduction">Support through Discord:<br>
+                        <Br>
+                        Our support team is available on Discord to assist you with any issues as quickly as possible.
+                        Things you will be helped for:
+                        <br>
+                        🔨 Punishment Appeal – If you believe you've been falsely punished by staff, open a ticket and
+                        we will review your case.
+                        <Br>
+                        🐞 Report a Bug – Found a bug on the server? Report it here so we can fix it quickly.
+                        <br>
+                        🛒 Billing Support – If you're having issues with a purchase, our Mod team can help you with any
+                        billing concerns.
+                        <br>
+                        🚩 Other – If none of the above apply, or if your issue is sensitive (e.g., related to players),
+                        open a ticket here. Our team will assist you promptly..
+                    </div>
+                    <div class="support-flex">
+                        <a class="btn-support btn-discord" href="https://discord.gg/vanillarealms"
+                            target="_blank">Discord
+                            Server</a>
+                    </div>
+                    <hr>
+                    <div class="support-modal-webstore">
+                        <div class="support-text"> Support through E-Mail (for higher staff and server owner to
+                            server):<br>
+
+                            <br>
+                            For more complex or sensitive issues that require the attention of higher staff or the
+                            server owner, you can reach us directly via email. This includes:
+                            <br>
+                            • Serious concerns or escalations<Br>
+                            • Private matters that cannot be shared publicly on Discord<Br>
+                        </div>
+
+                        <div class="support-modal-tebex">
+                            <div class="support-text"></div>
+                            <a class="btn-support btn-tebex" href="mailto:vanillarealms@gmail.com">E-mail<br>vanillarealms@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="rule">
-          <h2>Rule 3</h2>
-          <p>Do not abuse claim trust. Unclaimed land is free game.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 4</h2>
-          <p>Do not bypass PvP protection plugins.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 5</h2>
-          <p>Stay family-friendly. No inappropriate chats, names, skins, or builds.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 6</h2>
-          <p>Do not claim or build within 8 chunks of a pre-existing claim. Targeting another player's claim line is not allowed.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 7</h2>
-          <p>Do not discuss real world, current politics, religion, illicit drugs, or other sensitive topics.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 8</h2>
-          <p>Predatory behavior will not be tolerated.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 9</h2>
-          <p>Do not harass other players. Including chat, tp spamming, and begging.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 10</h2>
-          <p>Do not share personal information in public chats.
-            While we discourage sharing personal information in general, if you insist on doing so, please keep it in private messages.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 11</h2>
-          <p>Staff impersonation or disrespect is not permitted.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 12</h2>
-          <p>Do not falsely report other players.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 13</h2>
-          <p>Punishment or ban evasion is not allowed.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 14</h2>
-          <p>Do not speak other languages besides English in public chat. Local and private messages do not apply.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 15</h2>
-          <p>Do not advertise any other servers (Hypixel is an exception).</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 16</h2>
-          <p>Do not intentionally start or encourage drama.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 17</h2>
-          <p>Do not sell in-game items for real-life currency via in-game, discord, or otherwise.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 18</h2>
-          <p>Do not use alt accounts. Only one account per player is allowed.</p>
-        </div>
-        <div class="rule">
-          <h2>Rule 19</h2>
-          <p>Do not create lag machines.</p>
-        </div>
-      </div>
     </div>
 
 
+    <div class="cart-menu-overlay"></div>
+
+    <div class="footer-spacer"></div>
+    <div class="footer">
+        <div class="container d-flex">
+            <div class="copyright-container">
+                <div class="copyright">
+                    2024 © <span>Vanilla Realms</span>. All rights reserved.
+                </div>
+                <div class="copy-subtext">
+                    Not affiliated with Mojang AB or Microsoft
+                </div>
+            </div>
+            <!--DO NOT EVER DELETE THE FOLLOWING CREDITS-->
+            <div class="credit-icon flex-grow-1">
+                <a href="https://coldfiredzn.com/" target="_blank"><img src="./assets/coldfire.webp"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="popup-modal" tabindex="-1" role="dialog"></div>
 
 
-    
-  </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        id="a38a994704f662d083b945951c84a856" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.0/dist/sweetalert2.all.min.js"
+        integrity="sha256-tGZXBB9uK3MK1zLsI8b/1gZYQcBl8TMTi52kA2RmEKc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.5.0/tsparticles.bundle.min.js"
+        integrity="sha256-TDVBfv16L7aCIhk+iOR1cwAT/HDOsBAxKRbA+CWjx10=" crossorigin="anonymous"></script>
 
-  <footer class="footer">© Copyright 2024 Vanilla Realms </footer>
+    <script src="./assets/site.js"></script>
 
+    <script>
+        jQuery(function () {
+            var countdowns = $(".countdown-to");
+            countdowns.each(function () {
+                setInterval(function (ele) {
+                    timeLeft = parseInt(ele.attr("data-countdown"));
+                    if (timeLeft == 0) {
+                        ele.html("Time Expired!");
+                    } else {
+                        timeLeft--;
+                        ele.attr("data-countdown", timeLeft);
+                        var days = Math.floor(timeLeft / (60 * 60 * 24));
+                        var hours = Math.floor((timeLeft % (60 * 60 * 24)) / (60 * 60));
+                        var minutes = Math.floor((timeLeft % (60 * 60)) / (60));
+                        var seconds = Math.floor((timeLeft % 60));
+                        ele.html(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+                    }
+                }, 1000, jQuery(this));
+            });
+        });
+
+        jQuery(".card-container").eq(0).remove();
+    </script>
+
+    <div id="waiting-overlay" style="display: none;">
+        <i class="fa fa-cog fa-spin fa-3x"></i>
+    </div>
 
 </body>
-
-<script src="script.js"></script>
 
 </html>

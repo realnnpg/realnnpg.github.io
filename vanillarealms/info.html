@@ -1,246 +1,693 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Vanilla Realms </title>
-  <link rel="stylesheet" href="style2.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vanilla Realms • Welcome</title>
+    <link rel="shortcut icon"
+        href="https://dunb17ur4ymx4.cloudfront.net/webstore/favicons/316cfd4e2a62045d442690a31d0a268103b1a7c1.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-  <div class="sidebar">
-    <div class="logo-details">
-      <img src='Photos/vr_logo.webp'>
-      <div class="logo_name">Vanilla Realms</div>
-      <i class='bx bx-menu' id="btn"></i>
-    </div>
-    <ul class="nav-list">
-      <li>
-        <a href="index.html">
-          <i class='bx bx-home'></i>
-          <span class="links_name">Home</span>
-        </a>
-        <span class="tooltip">Home</span>
-      </li>
-      <li>
-        <a href="javascript:void(0)" onclick="copyLink(this)">
-          <i class='bx bx-play-circle'></i>
-          <span class="links_name" id="copylink">play.vanillarealms.com</span>
-        </a>
-        <span class="tooltip">Join Us</span>
-      </li>
-      <li>
-        <a href="https://discord.com/invite/vanillarealms" target="_blank">
-          <i class='bx bx-chat'></i>
-          <span class="links_name">Discord</span>
-        </a>
-        <span class="tooltip">Discord</span>
-      </li>
-      <li>
-        <a href="https://store.vanillarealms.com/" target="_blank">
-          <i class='bx bx-shopping-bag'></i>
-          <span class="links_name">Store</span>
-        </a>
-        <span class="tooltip">Store</span>
-      </li>
-      <li>
-        <a href="staff_apps.html">
-          <i class='bx bx-folder'></i>
-          <span class="links_name">Staff Applications</span>
-        </a>
-        <span class="tooltip">Staff Applications</span>
-      </li>
-      <li>
-        <a href="info.html">
-          <i class='bx bx-info-circle'></i>
-          <span class="links_name">Info</span>
-        </a>
-        <span class="tooltip">Info</span>
-      </li>
-      <li>
-        <a href="rules.html">
-          <i class='bx bx-book'></i>
-          <span class="links_name">Rules</span>
-        </a>
-        <span class="tooltip">Rules</span>
-      </li>
-      <li>
-        <a href="vote_lnks.html">
-          <i class='bx bx-upvote'></i>
-          <span class="links_name">Voting</span>
-        </a>
-        <span class="tooltip">Voting</span>
-      </li>
-      <li>
-        <a href="legal.html"">
-          <i class='bx bx-cog'></i>
-          <span class=" links_name">Legal</span>
-        </a>
-        <span class="tooltip">Legal</span>
-      </li>
-    </ul>
-  </div>
 
+    <div class="header-btn-row">
+        <div class="container">
+            <div class="flex-grow-1">
+                <a class="btn btn-link btn-home" href="index.html">
+                    <i class="fa-solid fa-arrow-left"></i> Return home
+                </a>
+            </div>
+            <div>
+                <button class="btn btn-link" data-toggle="modal" data-target="#supportModal">
+                    <i class="fa-solid fa-life-ring"></i> Support
+                </button>
 
-  <div class="home_container">
-
-    <div class="info_container">
-      <h1>Server FAQ</h1>
-      <div class="faq">
-        <div class="faq-item">
-          <button class="faq-question">Will the server ever reset?</button>
-          <div class="faq-answer">
-            <p>Any rumors of a server reset of any kind can be assumed as false unless it has been announced by Thun in #announcements.</p>
-          </div>
+            </div>
         </div>
-        <div class="faq-item">
-          <button class="faq-question">Is KeepInventory on?</button>
-          <div class="faq-answer">
-            <p>No. KeepInventory is disabled by default for all players. However, all paid ranks get access to keep inventory as a toggleable option.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">How do I prevent people from stealing my items if I die?</button>
-          <div class="faq-answer">
-            <p> If you die in the overworld your drops will be locked, meaning no player can pick them up except for you. You can also do /back to return to your death point. Dropped items are still susceptible to despawning when loaded if you don’t get them within 2 - 5 minutes.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Is PvP enabled?</button>
-          <div class="faq-answer">
-            <p>PvP is disabled by default. If you would like to participate in PvP, We have an /arena at spawn, that allows you to keep inventory & xp, and also has item durability disabled.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Is Griefing allowed on this server?</button>
-          <div class="faq-answer">
-            <p>Anything left unclaimed is fair game to take, claim, or grief. If you want to protect your things, you must claim them. Staff will not be able to help with unclaimed griefed builds. However, You are not allowed to target a player's claim line in order to grief areas.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">How do I get more claim blocks?</button>
-          <div class="faq-answer">
-            <p>You can obtain more claim blocks for free through voting, you can purchase them on the store, or you can buy them from other players.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">How do I claim my land?</button>
-          <div class="faq-answer">
-            <p>Vanilla Realms uses the GriefPrevention plugin to allow players to claim land and prevent grief from happening to protected land. Using /kit claim in-game will give you a golden shovel which you can use to mark out a claim. Right-click one corner of the area you would like to claim; after that, you then must run over and right-click the opposite corner from the one you first marked. This will create a claim in your desired area. Do note; You cannot claim in the Nether or the End.
-
-              The following link provides a visual aid on how to claim your land (https://tinyurl.com/GriefPreventionVideo)</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Do claims auto-unclaim?</button>
-          <div class="faq-answer">
-            <p>Yes, they do. After 60 days of not logging on to the server, all of that player's claims will auto-unclaim and your builds and items will be subject to grief. However, if you have 10k claim blocks from voting or 5k bonus claim blocks from crates or the store, your claims will not be automatically removed.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Do my warps get auto-removed?</button>
-          <div class="faq-answer">
-            <p>Yes. Warps are also removed after 60 days of not having logged on, just as claims. Unlike claims, there is no way to prevent this as of now.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">What is the mob limit per chunk?</button>
-          <div class="faq-answer">
-            <p>Zombie, Spider, Cave Spider, Skeleton, Creeper, Blaze: Max of 8 in a 25-block radius.
-              Chicken, Sheep, Pig: Max of 7 in a 25-block radius.
-              Cow: Max of 15 in a 10-block radius.
-              Villager: Max of 30 in a 50-block radius.
-              Glow Squid: Max of 5 in a 25-block radius.
-              Zombie Villager: Max of 1 in a 150-block radius.
-              Snow Golem: Max of 2 in a 50-block radius.
-              
-              All Other Entities: Max of 30 in a 50-block radius.
-              (Named tagged mobs do count towards this limit and are subject to despawning)
-              </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">What is the currency on this server?</button>
-          <div class="faq-answer">
-            <p>We use Emeralds as currency with "Ems" being Emeralds and "Emb" being Emerald Blocks.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Can I breed villagers on this server?</button>
-          <div class="faq-answer">
-            <p>No, all villager breeding has been turned off. Trades are also limited per player, see the /warp list for trade halls.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Are raid farms allowed on this server?</button>
-          <div class="faq-answer">
-            <p>Raid farms are allowed on the server. However, raids are limited to 12 hours per raid per village. So when making a farm, this is to be taken into account.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">I see a lot of players with spawners, how can I get my own?</button>
-          <div class="faq-answer">
-            <p>Several types of spawners are found throughout the overworld. However, you will have to vote until you acquire the Butcher+ rank or purchase the Wolf rank from our store to pick them up. You must still use a silk touch pickaxe to pick up the spawner. Only players with either of those ranks can retrieve spawners. There is a 24hr cooldown from this, however.
-              Alternative ways to get spawners are acquiring them from other players or crates at spawn.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Is the server P2W?</button>
-          <div class="faq-answer">
-            <p>The things we sell in our store do not give you a direct advantage over other players but may save you time to get certain things. You can also receive any paid crate keys for free through the higher vote ranks, the vote crate, and from server events.
-              Payments on the store allow the owner to spend more time running the server, improving your experience, growing the community, and much more.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">How close can I claim land to an existing claim?</button>
-          <div class="faq-answer">
-            <p>You must claim at least 8 chunks away from any pre-existing claims without the claim owner’s permission. You can see chunks by pressing F3 + G. Any claims too close to other players’ claims are subjected to be removed after a 48-hour waiting period.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">How big is the world border?</button>
-          <div class="faq-answer">
-            <p>Overworld: 30k x 30k [+/- 15,000 blocks in either direction.]</p>
-              <p>Nether: 10k x 10k [+/- 5,000 blocks in either direction.]</p>
-              <p>The End: 10k x 10k [+/- 5,000 blocks in either direction.]</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">I need to speak to a staff member, what can I do?</button>
-          <div class="faq-answer">
-            <p>You are welcome to speak to any staff member in-game regarding any issue, but you may also be requested to or need to make a ticket to further your discussion. Please do not @ staff members or discuss punishments in public channels to get their attention. Make a private ticket instead.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">I would like to join the Staff Team to help. How can I apply?</button>
-          <div class="faq-answer">
-            <p>If you want to become part of the Vanilla Realms staff team, please check the</p><a href="https://nnpg.dev/vanillarealms"> link</a><p> to our staff application</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">Can I use mods on this server?</button>
-          <div class="faq-answer">
-            <p>We allow many types of mods on this server, such as mini-maps and shaders like full bright (More extensive list coming soon). However, We do not allow any mod that gives a player an unfair advantage over other players. If you are kicked for using these mods, you must turn them off to continue playing.
-              A bad connection can also cause our anti-cheat to believe the mods you are using are giving you an unfair advantage, you may need to restart your game or check your internet if you believe you are being kicked unfairly.
-              Abusing mods that give an unfair advantage could get you banned from the server permanently.</p>
-          </div>
-        </div>
-        
-      </div>
     </div>
 
-  </div>
+    <div class="header" id="header-pjs"
+        style="--header-background: url(&#39;https://steamuserimages-a.akamaihd.net/ugc/2310974141604980016/B4EF3A7A2D1772DE26B1A6F51CE33A04FD8BB917/?imw=5000&amp;imh=5000&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=false&#39;); --background-position: top">
+        <canvas data-generated="true" style="width: 100%; height: 100%; pointer-events: none;" aria-hidden="true"
+            width="3820" height="1140"></canvas>
+    </div>
+
+    <div class="logo-ds-flex" data-breakpoint="1100px">
+        <div class="status-box-container">
+            <div class="status-box">
+                <div class="status-texts">
+                    <div class="sd-header">Play Now</div>
+                    <div class="sd-subtext">
+                        <div class="ip reel-1"><span id="ip">play.vanillarealms.com</span></div>
+                        <div class="reel-2">Click to copy IP</div>
+                    </div>
+                </div>
+                <div class="status-icon">
+                    <div class="icon-circle">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <div class="status-indicator">45</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="logo-container">
+            <a href="https://store.vanillarealms.com/">
+                <img class="logo" alt="logo" src="./assets/f56ef34144a83f3c76d02c0644162248dc8ee340.png">
+            </a>
+        </div>
+
+        <div class="discord-box-container">
+            <div class="discord-box"><a href="https://discord.gg/vanillarealms" target="_blank">
+                    <div class="discord-icon">
+                        <div class="icon-circle">
+                            <i class="fa-brands fa-discord"></i>
+                        </div>
+                    </div>
+                    <div class="discord-texts">
+                        <div class="sd-header">Discord</div>
+                        <div class="sd-subtext">
+                            <div class="discord-status reel-1" data-id="783544962507079680">
+                                <span class="status-number">???</span> users online
+                            </div>
+                            <div class="reel-2">Click to join now!</div>
+                        </div>
+                    </div>
+                </a></div>
+        </div>
+    </div>
+
+    <div class="container main-container">
+
+        <div class="row">
+            <div class="col-lg-3 sidebar-col">
+
+                <div class="login-header">Welcome to Vanilla Realms</div>
 
 
 
-  <footer class="footer">© Copyright 2024 Vanilla Realms </footer>
+                <div class="categories-sidebar-card">
+                    <div class="categories-sidebar">
 
 
+
+                        <div class="category-wrapper">
+                            <a href="rules.html">
+                                <div class="category">
+                                    <div class="category-name">
+                                        📜 Rules
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-wrapper">
+                            <a href="info.html">
+                                <div class="category">
+                                    <div class="category-name active">
+                                        🔎 Info
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="category-dropdown-parent">
+                            <div class="category category-dropdown-opener">
+                                <div class="category-name">
+                                    🛒 Store <i class="fa-solid fa-caret-down"></i> </div>
+                            </div>
+                            <div class="category-dropdown">
+                                <a class="category-dropdown-item" href="https://store.vanillarealms.com">🛖 Home</a>
+                                <a class="category-dropdown-item"
+                                    href="https://store.vanillarealms.com/category/ranks">👑 Ranks</a>
+                                <a class="category-dropdown-item"
+                                    href="https://store.vanillarealms.com/category/crate-keys"> 🗝️ Crate Keys</a>
+                                <a class="category-dropdown-item"
+                                    href="https://store.vanillarealms.com/category/extras">🏠 Claim Blocks</a>
+                            </div>
+                        </div>
+
+                        <div class="category-wrapper">
+                            <a href="staff-apps.html">
+                                <div class="category">
+                                    <div class="category-name">
+                                        🗂️ Staff Applications
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="category-wrapper">
+                            <a href="voting.html">
+                                <div class="category">
+                                    <div class="category-name ">
+                                        🗳️ Voting
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="top-donator-container">
+                        <div class="module-topdonator top-donator">
+                            <div class="donator-text">
+                                <div class="donator-title"><i class="fa-solid fa-crown"></i> Server Owner</div>
+                                <div class="donator-subtitle">
+                                    Thundurh
+                                </div>
+                            </div>
+                            <div class="donator-img">
+                                <img src="./assets/thundurh.png">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-9">
+                <div class="card">
+                    <div class="index-header-group">
+                        <div class="store-heading">Frequently Asked Questions</div>
+
+
+
+                    </div>
+
+                    <div class="index-widget-flexbox">
+                        <div class="module-payments widget">
+                            <div class="w-icon">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="1" style="--data-number: 5%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">Will the server ever reset?</div>
+                            <div class="w-subtext">Any rumors of a server reset of any kind can be assumed as false
+                                unless it has been announced by Thun in #announcements.
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="2" style="--data-number: 10%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">Is KeepInventory on?</div>
+                            <div class="w-subtext">No. KeepInventory is disabled by default for all players. However,
+                                all paid ranks get access to keep inventory as a toggleable option.</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="3" style="--data-number: 15%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">How do I prevent people from stealing my items if I die?</div>
+                            <div class="w-subtext">If you die in the overworld your drops will be locked, meaning no
+                                player can pick them up except for you. You can also do /back to return to your death
+                                point. Dropped items are still susceptible to despawning when loaded if you don’t get
+                                them within 2 - 5 minutes.</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="4" style="--data-number: 20%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">Is PvP enabled?</div>
+                            <div class="w-subtext">PvP is disabled by default. If you would like to participate in PvP,
+                                We have an /arena at spawn, that allows you to keep inventory & xp, and also has item
+                                durability disabled.</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="5" style="--data-number: 25%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">Is Griefing allowed on this server?</div>
+                            <div class="w-subtext">Anything left unclaimed is fair game to take, claim, or grief. If you
+                                want to protect your things, you must claim them. Staff will not be able to help with
+                                unclaimed griefed builds. However, You are not allowed to target a player's claim line
+                                in order to grief areas.
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="6" style="--data-number: 30%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">How do I get more claim blocks?</div>
+                            <div class="w-subtext">You can obtain more claim blocks for free through voting, you can
+                                purchase them on the store, or you can buy them from other players.</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="7" style="--data-number: 35%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">How do I claim my land?</div>
+                            <div class="w-subtext">Vanilla Realms uses the GriefPrevention plugin to allow players to
+                                claim land and prevent grief from happening to protected land. Using /kit claim in-game
+                                will give you a golden shovel which you can use to mark out a claim. Right-click one
+                                corner of the area you would like to claim; after that, you then must run over and
+                                right-click the opposite corner from the one you first marked. This will create a claim
+                                in your desired area. Do note; You cannot claim in the Nether or the End. The following
+                                link provides a visual aid on how to claim your land
+                                (https://tinyurl.com/GriefPreventionVideo)</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="8" style="--data-number: 40%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">Do claims auto-unclaim?</div>
+                            <div class="w-subtext">Yes, they do. After 60 days of not logging on to the server, all of
+                                that player's claims will auto-unclaim and your builds and items will be subject to
+                                grief. However, if you have 10k claim blocks from voting or 5k bonus claim blocks from
+                                crates or the store, your claims will not be automatically removed.
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="9" style="--data-number: 45%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">Do my warps get auto-removed?
+                            </div>
+                            <div class="w-subtext">Yes. Warps are also removed after 60 days of not having logged on,
+                                just as claims. Unlike claims, there is no way to prevent this as of now.
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="10" style="--data-number: 50%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">What is the mob limit per chunk?</div>
+                            <div class="w-subtext">Zombie, Spider, Cave Spider, Skeleton, Creeper, Blaze: Max of 8 in a
+                                25-block radius. Chicken, Sheep, Pig: Max of 7 in a 25-block radius. Cow: Max of 15 in a
+                                10-block radius. Villager: Max of 30 in a 50-block radius. Glow Squid: Max of 5 in a
+                                25-block radius. Zombie Villager: Max of 1 in a 150-block radius. Snow Golem: Max of 2
+                                in a 50-block radius. All Other Entities: Max of 30 in a 50-block radius. (Named tagged
+                                mobs do count towards this limit and are subject to despawning)</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="11" style="--data-number: 55%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">What is the currency on this server?</div>
+                            <div class="w-subtext">We use Emeralds as currency with "Ems" being Emeralds and "Emb" being
+                                Emerald Blocks.</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="12" style="--data-number: 60%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">Can I breed villagers on this server?
+                            </div>
+                            <div class="w-subtext">No, all villager breeding has been turned off. Trades are also
+                                limited per player, see the /warp list for trade halls.</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="13" style="--data-number: 65%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">Are raid farms allowed on this server?</div>
+                            <div class="w-subtext">Raid farms are allowed on the server. However, raids are limited to
+                                12 hours per raid per village. So when making a farm, this is to be taken into account.
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="14" style="--data-number: 70%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">I see a lot of players with spawners, how can I get my own?</div>
+                            <div class="w-subtext">Several types of spawners are found throughout the overworld.
+                                However, you will have to vote until you acquire the Butcher+ rank or purchase the Wolf
+                                rank from our store to pick them up. You must still use a silk touch pickaxe to pick up
+                                the spawner. Only players with either of those ranks can retrieve spawners. There is a
+                                24hr cooldown from this, however. Alternative ways to get spawners are acquiring them
+                                from other players or crates at spawn.</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="15" style="--data-number: 75%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">Is the server P2W?
+                            </div>
+                            <div class="w-subtext">The things we sell in our store do not give you a direct advantage
+                                over other players but may save you time to get certain things. You can also receive any
+                                paid crate keys for free through the higher vote ranks, the vote crate, and from server
+                                events. Payments on the store allow the owner to spend more time running the server,
+                                improving your experience, growing the community, and much more.</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="16" style="--data-number: 80%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">How close can I claim land to an existing claim?</div>
+                            <div class="w-subtext">You must claim at least 8 chunks away from any pre-existing claims
+                                without the claim owner’s permission. You can see chunks by pressing F3 + G. Any claims
+                                too close to other players’ claims are subjected to be removed after a 48-hour waiting
+                                period.</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="17" style="--data-number: 85%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">How big is the world border?</div>
+                            <div class="w-subtext">Overworld: 30k x 30k [+/- 15,000 blocks in either direction.]
+                                <Br>
+                                Nether: 10k x 10k [+/- 5,000 blocks in either direction.]
+                                <Br>
+                                The End: 10k x 10k [+/- 5,000 blocks in either direction.]
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="18" style="--data-number: 90%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">I need to speak to a staff member, what can I do?
+                            </div>
+                            <div class="w-subtext">You are welcome to speak to any staff member in-game regarding any
+                                issue, but you may also be requested to or need to make a ticket to further your
+                                discussion. Please do not @ staff members or discuss punishments in public channels to
+                                get their attention. Make a private ticket instead.</div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="19" style="--data-number: 95%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">I would like to join the Staff Team to help. How can I apply?
+                            </div>
+                            <div class="w-subtext">If you want to become part of the Vanilla Realms staff team, please
+                                check the
+                                <a href="staff-apps.html">
+                                    link</a>
+                                to our staff application
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="module-goal widget">
+                        <div class="w-progress">
+                            <div id="progress">
+                                <div data-num="20" style="--data-number: 100%;" class="progress-item"></div>
+                            </div>
+                        </div>
+                        <div class="w-description">
+                            <div class="w-title">Can I use mods on this server?</div>
+                            <div class="w-subtext">We allow many types of mods on this server, such as mini-maps and
+                                shaders like full bright (More extensive list coming soon). However, We do not allow any
+                                mod that gives a player an unfair advantage over other players. If you are kicked for
+                                using these mods, you must turn them off to continue playing. A bad connection can also
+                                cause our anti-cheat to believe the mods you are using are giving you an unfair
+                                advantage, you may need to restart your game or check your internet if you believe you
+                                are being kicked unfairly. Abusing mods that give an unfair advantage could get you
+                                banned from the server permanently.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Support button(top right)-->
+    <div class="modal fade" id="supportModal" tabindex="-1" role="dialog" aria-labelledby="supportModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="package-modal-close" data-dismiss="modal"><i class="fa-solid fa-x"></i></div>
+                    <div class="support-modal-title">Support</div>
+                    <div class="support-modal-introduction">Support through Discord:<br>
+                        <Br>
+                        Our support team is available on Discord to assist you with any issues as quickly as possible.
+                        Things you will be helped for:
+                        <br>
+                        🔨 Punishment Appeal – If you believe you've been falsely punished by staff, open a ticket and
+                        we will review your case.
+                        <Br>
+                        🐞 Report a Bug – Found a bug on the server? Report it here so we can fix it quickly.
+                        <br>
+                        🛒 Billing Support – If you're having issues with a purchase, our Mod team can help you with any
+                        billing concerns.
+                        <br>
+                        🚩 Other – If none of the above apply, or if your issue is sensitive (e.g., related to players),
+                        open a ticket here. Our team will assist you promptly..
+                    </div>
+                    <div class="support-flex">
+                        <a class="btn-support btn-discord" href="https://discord.gg/vanillarealms"
+                            target="_blank">Discord
+                            Server</a>
+                    </div>
+                    <hr>
+                    <div class="support-modal-webstore">
+                        <div class="support-text"> Support through E-Mail (for higher staff and server owner to
+                            server):<br>
+
+                            <br>
+                            For more complex or sensitive issues that require the attention of higher staff or the
+                            server owner, you can reach us directly via email. This includes:
+                            <br>
+                            • Serious concerns or escalations<Br>
+                            • Private matters that cannot be shared publicly on Discord<Br>
+                        </div>
+
+                        <div class="support-modal-tebex">
+                            <div class="support-text"></div>
+                            <a class="btn-support btn-tebex"
+                                href="mailto:vanillarealms@gmail.com">E-mail<br>vanillarealms@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cart-menu-overlay"></div>
+
+    <div class="footer-spacer"></div>
+    <div class="footer">
+        <div class="container d-flex">
+            <div class="copyright-container">
+                <div class="copyright">
+                    2024 © <span>Vanilla Realms</span>. All rights reserved.
+                </div>
+                <div class="copy-subtext">
+                    Not affiliated with Mojang AB or Microsoft
+                </div>
+            </div>
+            <!--DO NOT EVER DELETE THE FOLLOWING CREDITS-->
+            <div class="credit-icon flex-grow-1">
+                <a href="https://coldfiredzn.com/" target="_blank"><img src="./assets/coldfire.webp"
+                        style="margin-right: 30px;"></a>
+
+                <a href="https://nnpg.dev/" target="_blank"><img src="./assets/nnpg.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="popup-modal" tabindex="-1" role="dialog"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        id="a38a994704f662d083b945951c84a856" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.2.0/dist/sweetalert2.all.min.js"
+        integrity="sha256-tGZXBB9uK3MK1zLsI8b/1gZYQcBl8TMTi52kA2RmEKc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.5.0/tsparticles.bundle.min.js"
+        integrity="sha256-TDVBfv16L7aCIhk+iOR1cwAT/HDOsBAxKRbA+CWjx10=" crossorigin="anonymous"></script>
+
+    <script src="./assets/site.js"></script>
+
+    <script>
+        jQuery(function () {
+            var countdowns = $(".countdown-to");
+            countdowns.each(function () {
+                setInterval(function (ele) {
+                    timeLeft = parseInt(ele.attr("data-countdown"));
+                    if (timeLeft == 0) {
+                        ele.html("Time Expired!");
+                    } else {
+                        timeLeft--;
+                        ele.attr("data-countdown", timeLeft);
+                        var days = Math.floor(timeLeft / (60 * 60 * 24));
+                        var hours = Math.floor((timeLeft % (60 * 60 * 24)) / (60 * 60));
+                        var minutes = Math.floor((timeLeft % (60 * 60)) / (60));
+                        var seconds = Math.floor((timeLeft % 60));
+                        ele.html(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+                    }
+                }, 1000, jQuery(this));
+            });
+        });
+
+        jQuery(".card-container").eq(0).remove();
+    </script>
+
+    <div id="waiting-overlay" style="display: none;">
+        <i class="fa fa-cog fa-spin fa-3x"></i>
+    </div>
 
 </body>
-
-<script src="script.js"></script>
 
 </html>
