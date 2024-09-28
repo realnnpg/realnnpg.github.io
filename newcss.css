@@ -12,13 +12,13 @@ html {
 body {
   height: calc(100vh - 8em);
   padding: 4em;
-  color: rgba(255, 255, 255, .75);
+  color: rgb(255, 255, 255);
   font-family: "dos_vga", Arial, sans-serif;
   background-color: rgb(0, 0, 0);
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 16px;
 
 }
 
@@ -48,7 +48,7 @@ h1 {
 }
 
 h1 .type {
-  font-size: 2.5rem;
+  font-size: 32px;
   overflow: hidden;
   border-right: .15em solid rgb(0, 0, 0);
   white-space: nowrap;
@@ -58,7 +58,7 @@ h1 .type {
 }
 
 h1 .type2 {
-  font-size: 2.5rem;
+  font-size: 32px;
   overflow: hidden;
   border-right: .15em solid rgb(0, 0, 0);
   white-space: nowrap;
@@ -69,7 +69,18 @@ h1 .type2 {
 }
 
 h1 .type3 {
-  font-size: 2.5rem;
+  font-size: 32px;
+  overflow: hidden;
+  border-right: .15em solid rgb(0, 0, 0);
+  white-space: nowrap;
+  width: 0;
+  animation:
+    typing 1s steps(25, end) forwards;
+  animation-delay: 2s;
+}
+
+h1 .type4 {
+  font-size: 32px;
   overflow: hidden;
   border-right: .15em solid rgb(0, 0, 0);
   white-space: nowrap;
