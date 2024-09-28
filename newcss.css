@@ -10,7 +10,7 @@ body{
   font-family: "dos_vga", Arial, sans-serif;
   background-color: rgb(0, 0, 0);  
 }
-.line-1{
+/* .line-1{
     position: relative;
     top: 50%;  
     width: 24em;
@@ -22,7 +22,7 @@ body{
     overflow: hidden;
     transform: translateY(-50%);    
 }
-
+*/
 /* Animation */
 .anim-typewriter{
   animation: typewriter 4s steps(44) 1s 1 normal both,
