@@ -45,7 +45,7 @@ h1 {
 h1 .type {
   font-size: 2.5rem;
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: .15em solid rgb(0, 0, 0);
   white-space: nowrap;
   width: 0;
   animation:
@@ -55,7 +55,7 @@ h1 .type {
 h1 .type2 {
   font-size: 2.5rem;
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: .15em solid rgb(0, 0, 0);
   white-space: nowrap;
   width: 0;
   animation:
@@ -66,7 +66,7 @@ h1 .type2 {
 h1 .type3 {
   font-size: 2.5rem;
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: .15em solid rgb(0, 0, 0);
   white-space: nowrap;
   width: 0;
   animation:
@@ -90,6 +90,6 @@ h1 .type3 {
   }
 
   to {
-    border-color: orange;
+    border-color: rgb(0, 0, 0);
   }
 }
