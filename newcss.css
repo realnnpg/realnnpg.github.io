@@ -87,7 +87,7 @@ h1 .type4 {
   width: 0;
   animation:
     typing 1s steps(25, end) forwards;
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 
 @keyframes typing {
