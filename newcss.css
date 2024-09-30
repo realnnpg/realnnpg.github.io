@@ -22,6 +22,15 @@ body {
 
 }
 
+.menu {
+  font-size: 32px;
+  overflow: hidden;
+  border-right: .15em solid rgb(0, 0, 0);
+  white-space: nowrap;
+  width: 0;
+  animation-delay: 4s;
+}
+
 a {
   color: mediumseagreen;
 }
