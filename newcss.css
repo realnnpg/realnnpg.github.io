@@ -19,7 +19,7 @@ body {
 }
 
 /* Section Wrapper */
-.section {
+/*.section {
     position: absolute;
     top: 0;
     left: 0;
@@ -31,6 +31,7 @@ body {
     opacity: 1;
     transition: opacity 2s ease;
 }
+*/
 
 .section-one {
     background-color: black;
