@@ -15,7 +15,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden; /* Prevent extra scrolling */
     margin: 0;
 }
 
@@ -35,13 +34,13 @@ body {
 .section-one {
     background-color: black;
     color: white;
-    opacity: 1; /* Start fully visible */
 }
 
 .section-two {
     background-color: #007BFF;
     color: white;
     opacity: 0; /* Initially hidden */
+    transition: opacity 2s ease;
 }
 
 /* Specific Styles for Part 1 */

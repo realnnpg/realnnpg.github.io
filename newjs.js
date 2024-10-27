@@ -38,14 +38,9 @@ function dragEnd() {
     document.removeEventListener("mouseup", dragEnd);
 }
 
-// Scroll-triggered transition
-window.addEventListener('scroll', () => {
-    const sectionOne = document.querySelector('.section-one');
-    const sectionTwo = document.querySelector('.section-two');
-    
-    // Check if the user has scrolled down by a specific threshold (e.g., 100px)
-    if (window.scrollY > 100) {
-        sectionOne.style.opacity = '0';
-        sectionTwo.style.opacity = '1';
-    }
+// Display the second section after a delay
+window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        document.querySelector('.section-two').style.opacity = '1';
+    }, 4000); // Adjust delay as needed
 });
