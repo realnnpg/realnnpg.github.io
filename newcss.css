@@ -95,34 +95,45 @@ h1 {
 }
 
 /* Specific Styles for Part 2 */
-.container {
-    text-align: center;
-    position: relative;
-    width: 520px;
-    height: 520px;
+section .section-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #007BFF;
+  font-family: Arial, sans-serif;
 }
 
+.container {
+  text-align: center;
+  color: white;
+  position: relative;
+  width: 520px;
+  height: 520px;
+}
+
+
 .grid {
-    position: relative;
+  position: relative;
 }
 
 .box {
-    position: absolute;
-    background-color: white;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 8px;
-    width: 150px;
-    height: 150px;
+  position: absolute;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 150px;
+  height: 150px;
 }
 
 .box:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
