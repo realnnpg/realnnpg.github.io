@@ -1,10 +1,3 @@
-// Function to edit box content
-function editBox(element) {
-    let info = prompt("Edit the information:", element.innerHTML);
-    if (info !== null) {
-        element.innerHTML = info;
-    }
-}
 
 // Drag and Drop functionality
 let draggedElement = null;

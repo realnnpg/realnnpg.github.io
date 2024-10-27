@@ -37,7 +37,7 @@ body {
 }
 
 .section-two {
-    background-color: #007BFF;
+    background-color: black;
     color: white;
     opacity: 0; /* Initially hidden */
     transition: opacity 2s ease;
@@ -121,8 +121,12 @@ section .section-two {
   border-radius: 8px;
   width: 150px;
   height: 150px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .box:hover {
   transform: scale(1.05);
 }
+
