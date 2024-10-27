@@ -3,29 +3,65 @@
   src: url(dos_vga.ttf);
 }
 
-/* Global */
-html {
-  min-height: 100%;
-  overflow: hidden;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  height: calc(100vh - 8em);
-  padding: 4em;
-  color: rgb(255, 255, 255);
-  font-family: "dos_vga", Arial, sans-serif;
-  background-color: rgb(0, 0, 0);
+    font-family: "dos_vga", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-y: auto; /* Enable scrolling */
 }
 
+/* Section Wrapper */
+.section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.section-one {
+    background-color: black;
+    color: white;
+}
+
+.section-two {
+    background-color: #007BFF;
+    color: white;
+    opacity: 0;
+}
+
+/* Fade Transitions */
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+/* Specific Styles for Part 1 */
 .logo {
   font-size: 16px;
-
 }
 
 .menu {
   font-size: 32px;
   overflow: hidden;
-  border-right: .15em solid rgb(0, 0, 0);
+  border-right: .15em solid black;
   white-space: nowrap;
   width: 0;
   animation-delay: 4s;
@@ -35,86 +71,58 @@ a {
   color: mediumseagreen;
 }
 
-.c1 {
-  display: inline-block;
-}
-
-.c2 {
-  display: inline-block;
-}
-
-.c3 {
-  display: inline-block;
-}
-
-.c4 {
-  display: inline-block;
-}
-
 h1 {
-  font-size: 3.2rem;
+  font-size: 13px;
   margin-top: 1%;
 }
 
-h1 .type {
+.type, .type2, .type3, .type4 {
   font-size: 32px;
   overflow: hidden;
-  border-right: .15em solid rgb(0, 0, 0);
+  border-right: .15em solid black;
   white-space: nowrap;
   width: 0;
-  animation:
-    typing 1s steps(25, end) forwards;
+  animation: typing 1s steps(25, end) forwards;
 }
 
-h1 .type2 {
-  font-size: 32px;
-  overflow: hidden;
-  border-right: .15em solid rgb(0, 0, 0);
-  white-space: nowrap;
-  width: 0;
-  animation:
-    typing 1s steps(25, end) forwards;
-  animation-delay: 1s;
-}
-
-h1 .type3 {
-  font-size: 32px;
-  overflow: hidden;
-  border-right: .15em solid rgb(0, 0, 0);
-  white-space: nowrap;
-  width: 0;
-  animation:
-    typing 1s steps(25, end) forwards;
-  animation-delay: 2s;
-}
-
-h1 .type4 {
-  font-size: 32px;
-  overflow: hidden;
-  border-right: .15em solid rgb(0, 0, 0);
-  white-space: nowrap;
-  width: 0;
-  animation:
-    typing 1s steps(25, end) forwards;
-  animation-delay: 3s;
-}
+.type2 { animation-delay: 1s; }
+.type3 { animation-delay: 2s; }
+.type4 { animation-delay: 3s; }
 
 @keyframes typing {
-  from {
-    width: 0
-  }
-
-  to {
-    width: 100%
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
-@keyframes blink {
-  from {
-    border-color: transparent
-  }
+/* Specific Styles for Part 2 */
+.container {
+    text-align: center;
+    position: relative;
+    width: 520px;
+    height: 520px;
+}
 
-  to {
-    border-color: rgb(0, 0, 0);
-  }
+.grid {
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+}
+
+.box:hover {
+    transform: scale(1.05);
 }

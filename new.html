@@ -1,20 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>nnpg</title>
-    <link rel="stylesheet" href="./newcss.css">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎈</text></svg>">
+    <title>Combined Site</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <main>
-        <pre class="logo">
+    <!-- First Part -->
+    <div class="section section-one">
+        <main>
+            <pre class="logo">
     $$$$$$$\  $$$$$$$\   $$$$$$\   $$$$$$\  
     $$  __$$\ $$  __$$\ $$  __$$\ $$  __$$\ 
     $$ |  $$ |$$ |  $$ |$$ /  $$ |$$ /  $$ |
@@ -25,30 +21,44 @@
                         $$ |      \$$$$$$  |
                         \__|       \______/
                             </pre>
-        <h1>
-            <div class="c1">
-                <div class="type">Welcome to my site</div>
-            </div>
-            </br>
-            <div class="c2">
-                <div class="type2">I am nnpg!</div>
-            </div>
-            </br>
-            <div class="c3">
-                <div class="type3">Please choose a category below</div>
-            </div>
-            <div class="c4"></div>
-            <div class="type4">...</div>
-            </div></br>
-            <div class="menu">
-                <a href="./new.html">home</a>
-            </div>
-        </h1>
-<br>
-<br>
+            <h1>
+                <div class="c1"><div class="type">Welcome to my site</div></div><br>
+                <div class="c2"><div class="type2">I am nnpg!</div></div><br>
+                <div class="c3"><div class="type3">Please choose a category below</div></div><br>
+                <div class="menu"><a href="#">Home</a></div>
+            </h1>
+        </main>
+    </div>
 
-    </main>
-    <script src="newjs.js"></script>
+    <!-- Second Part -->
+    <div class="section section-two">
+        <div class="container">
+            <h1>About Me</h1>
+            <div class="grid">
+                <div class="box" onmousedown="dragStart(event)" onclick="editBox(this)">Age: 25<br>Gender: Male</div>
+                <div class="box" onmousedown="dragStart(event)" onclick="editBox(this)">Skills: HTML, CSS, JavaScript</div>
+                <div class="box" onmousedown="dragStart(event)" onclick="editBox(this)">Hobbies: Reading, Gaming</div>
+                <div class="box" onmousedown="dragStart(event)" onclick="editBox(this)">Location: New York, USA</div>
+                <div class="box" onmousedown="dragStart(event)" onclick="editBox(this)">Education: Computer Science</div>
+                <div class="box" onmousedown="dragStart(event)" onclick="editBox(this)">Experience: 3 years in Web Development</div>
+                <div class="box" onmousedown="dragStart(event)" onclick="editBox(this)">Languages: English, Spanish</div>
+                <div class="box" onmousedown="dragStart(event)" onclick="editBox(this)">Interests: AI, Design</div>
+                <div class="box" onmousedown="dragStart(event)" onclick="editBox(this)">Projects: Personal Blog, E-commerce Site</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // JavaScript to trigger transition on scroll
+        window.addEventListener('scroll', () => {
+            const threshold = 100; // Adjust this value as needed
+            if (window.scrollY > threshold) {
+                document.querySelector('.section-one').classList.add('fade-out');
+                document.querySelector('.section-two').classList.add('fade-in');
+                window.removeEventListener('scroll', arguments.callee); // Remove event listener after triggering
+            }
+        });
+    </script>
 </body>
-
 </html>
