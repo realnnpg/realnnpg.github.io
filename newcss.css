@@ -16,7 +16,6 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    overflow-y: auto; /* Enable scrolling */
 }
 
 /* Section Wrapper */
@@ -44,14 +43,6 @@ body {
     opacity: 0;
 }
 
-/* Fade Transitions */
-.fade-out {
-    opacity: 0;
-}
-
-.fade-in {
-    opacity: 1;
-}
 
 /* Specific Styles for Part 1 */
 .logo {
