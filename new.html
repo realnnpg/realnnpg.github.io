@@ -48,16 +48,6 @@
     </div>
 
     <script src="newjs.js"></script>
-    <script>
-        // JavaScript to trigger transition on scroll
-        window.addEventListener('scroll', () => {
-            const threshold = 100; // Adjust this value as needed
-            if (window.scrollY > threshold) {
-                document.querySelector('.section-one').classList.add('fade-out');
-                document.querySelector('.section-two').classList.add('fade-in');
-                window.removeEventListener('scroll', arguments.callee); // Remove event listener after triggering
-            }
-        });
-    </script>
+
 </body>
 </html>
