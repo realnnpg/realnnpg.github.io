@@ -130,3 +130,13 @@ section .section-two {
   transform: scale(1.05);
 }
 
+.large-box {
+  width: 320px;
+  height: 150px;
+}
+
+.large-vertical-box {
+  width: 320px;
+  height: 300px;
+}
+
