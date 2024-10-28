@@ -140,31 +140,23 @@ section .section-two {
   height: 300px;
 }
 
-/*connect*/
-
-.contact {
-  padding: 100px 20px;
-  margin-bottom: 100px;
-}
-
-.icons {
+/* Adjust the .icons styling to fit within the "Connect" box */
+.box .icons {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 0;
-  display: inline-table;
+  margin-top: 10px;
+  gap: 10px;
 }
 
 .icons li {
   list-style: none;
-  margin-top: 20px;
-  margin-right: 15px;
-  width: 60px;
-  float: left;
 }
 
 .icons li a {
-  display: block;
-  width: 4em; /* Button size */
-  height: 4em; /* Button size */
+  width: 2.5em; /* Adjusted for smaller box */
+  height: 2.5em; /* Adjusted for smaller box */
   background-color: rgba(255, 255, 255, 0.071);
   border-radius: 0.625rem;
   display: flex;
@@ -177,13 +169,4 @@ section .section-two {
   width: 70%; /* Slightly bigger image */
   height: 70%; /* Slightly bigger image */
   transition: transform 0.25s ease;
-}
-
-.icons li a:hover {
-  transform: translateY(-6%);
-  background-color: rgba(255, 255, 255, 0.149);
-}
-
-.icons li a:hover img {
-  transform: scale(1.1); /* Slight zoom on hover */
 }
