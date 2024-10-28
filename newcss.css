@@ -140,3 +140,50 @@ section .section-two {
   height: 300px;
 }
 
+/*connect*/
+
+.contact {
+  padding: 100px 20px;
+  margin-bottom: 100px;
+}
+
+.icons {
+  justify-content: center;
+  padding: 0;
+  display: inline-table;
+}
+
+.icons li {
+  list-style: none;
+  margin-top: 20px;
+  margin-right: 15px;
+  width: 60px;
+  float: left;
+}
+
+.icons li a {
+  display: block;
+  width: 4em; /* Button size */
+  height: 4em; /* Button size */
+  background-color: rgba(255, 255, 255, 0.071);
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.icons li a img {
+  width: 70%; /* Slightly bigger image */
+  height: 70%; /* Slightly bigger image */
+  transition: transform 0.25s ease;
+}
+
+.icons li a:hover {
+  transform: translateY(-6%);
+  background-color: rgba(255, 255, 255, 0.149);
+}
+
+.icons li a:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
