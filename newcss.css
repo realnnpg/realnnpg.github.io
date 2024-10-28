@@ -140,13 +140,24 @@ section .section-two {
   height: 300px;
 }
 
-/* Adjust the .icons styling to fit within the "Connect" box */
+
+
+
+
+.box h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+  text-align: center;
+  color: black;
+  margin-bottom: 10px; /* Space between "Connect" and icons */
+}
+
 .box .icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 0;
-  margin-top: 10px;
   gap: 10px;
 }
 
@@ -155,8 +166,8 @@ section .section-two {
 }
 
 .icons li a {
-  width: 2.5em; /* Adjusted for smaller box */
-  height: 2.5em; /* Adjusted for smaller box */
+  width: 2.5em;
+  height: 2.5em;
   background-color: rgba(255, 255, 255, 0.071);
   border-radius: 0.625rem;
   display: flex;
@@ -166,7 +177,16 @@ section .section-two {
 }
 
 .icons li a img {
-  width: 70%; /* Slightly bigger image */
-  height: 70%; /* Slightly bigger image */
+  width: 70%;
+  height: 70%;
   transition: transform 0.25s ease;
+}
+
+.icons li a:hover {
+  transform: translateY(-6%);
+  background-color: rgba(255, 255, 255, 0.149);
+}
+
+.icons li a:hover img {
+  transform: scale(1.1);
 }
