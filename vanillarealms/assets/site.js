@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
         var loginWithDiscordBtn = document.getElementById("login-with-discord");
     
