@@ -1,5 +1,4 @@
 
-// Drag and Drop functionality
 let draggedElement = null;
 let offsetX = 0;
 let offsetY = 0;
@@ -31,9 +30,8 @@ function dragEnd() {
     document.removeEventListener("mouseup", dragEnd);
 }
 
-// Display the second section after a delay
 window.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.querySelector('.section-two').style.opacity = '1';
-    }, 4000); // Adjust delay as needed
+    }, 4000);
 });
